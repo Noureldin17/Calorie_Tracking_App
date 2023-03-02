@@ -1,9 +1,11 @@
-import 'package:fitness_app/presentation/widgets/OnBoardingItem.dart';
+import 'package:fitness_app/presentation/widgets/OnBoarding/OnBoardingItem.dart';
+import 'package:fitness_app/presentation/widgets/PrimaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../constants/onboarding_viewlist.dart' as onboardinglist;
 import '../colors.dart' as colors;
+import '../../constants/pages.dart' as pages;
 
 class OnBoardingPage extends StatefulWidget {
   OnBoardingPage({super.key, this.LastPage});
@@ -66,6 +68,23 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       ),
                     ),
                   ]),
+                  Spacer(),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 20.sp),
+                    child: PrimaryButton(
+                      buttonText: 'Next',
+                      OnPressed: () {
+                        if (widget.LastPage == true) {
+                          Navigator.pushReplacementNamed(
+                              context, pages.Login_Page);
+                        } else {
+                          onBoardingPageController.nextPage(
+                              duration: Duration(milliseconds: 600),
+                              curve: Curves.easeInOut);
+                        }
+                      },
+                    ),
+                  )
                 ],
               ),
             )));

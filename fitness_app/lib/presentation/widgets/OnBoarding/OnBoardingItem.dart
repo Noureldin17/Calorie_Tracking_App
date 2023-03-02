@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import '../../data/models/onboarding_model.dart';
+import '../../../data/models/onboarding_model.dart';
+import '../../colors.dart' as colors;
 
 class OnBoardingItem extends StatelessWidget {
   const OnBoardingItem({super.key, required this.model});
@@ -29,9 +30,10 @@ class OnBoardingItem extends StatelessWidget {
                       height: 165.sp,
                       padding: EdgeInsets.all(10.sp),
                       decoration: BoxDecoration(
-                          border: Border.all(width: 0, color: Color(0xFCF8E8)),
+                          border:
+                              Border.all(width: 0.1, color: colors.ButtonColor),
                           borderRadius: BorderRadius.circular(9),
-                          color: Color.fromARGB(148, 252, 248, 232)),
+                          color: Color.fromARGB(206, 252, 248, 232)),
                       child: Column(
                         children: [
                           model.textContainer,

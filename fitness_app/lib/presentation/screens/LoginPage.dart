@@ -13,10 +13,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        children: [
-          Image.asset('assets/onboarding/Eatinghealthyfood.gif'),
-          Image.asset('assets/onboarding/Diet.gif'),
-        ],
+        children: [],
       ),
     );
   }

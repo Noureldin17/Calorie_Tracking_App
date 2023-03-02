@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import '../presentation/colors.dart' as colors;
 import '../data/models/onboarding_model.dart';
 
 final List<OnBoardingModel> onboardinglist = [
@@ -20,7 +20,7 @@ final List<OnBoardingModel> onboardinglist = [
             text: 'your diary ',
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
-                    color: Color.fromARGB(255, 51, 102, 255),
+                    color: colors.PrimaryColor,
                     fontSize: 30,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
@@ -52,7 +52,7 @@ final List<OnBoardingModel> onboardinglist = [
             text: 'FOODPIC',
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
-                    color: Color.fromARGB(255, 51, 102, 255),
+                    color: colors.PrimaryColor,
                     fontSize: 30,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
@@ -65,22 +65,22 @@ final List<OnBoardingModel> onboardinglist = [
           child: RichText(
               text: TextSpan(children: [
         TextSpan(
-            text: "Stick to your diet with ",
+            text: "Achieve your goals, ",
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
                     fontSize: 30,
                     fontWeight: FontWeight.w500))),
         TextSpan(
-            text: 'FOODPIC ',
+            text: 'get in shape, ',
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
-                    color: Color.fromARGB(255, 51, 102, 255),
+                    color: colors.PrimaryColor,
                     fontSize: 30,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
-            text: "and have a healthy lifestyle",
+            text: "enjoy a healthy lifestyle",
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
