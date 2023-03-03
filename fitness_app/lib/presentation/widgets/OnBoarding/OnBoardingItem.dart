@@ -31,9 +31,9 @@ class OnBoardingItem extends StatelessWidget {
                       padding: EdgeInsets.all(10.sp),
                       decoration: BoxDecoration(
                           border:
-                              Border.all(width: 0.1, color: colors.ButtonColor),
+                              Border.all(width: 0.1, color: Colors.transparent),
                           borderRadius: BorderRadius.circular(9),
-                          color: Color.fromARGB(206, 252, 248, 232)),
+                          color: colors.CardBackgroundColor),
                       child: Column(
                         children: [
                           model.textContainer,

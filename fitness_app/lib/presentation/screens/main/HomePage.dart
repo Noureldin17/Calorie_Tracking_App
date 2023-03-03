@@ -1,3 +1,5 @@
+import 'package:fitness_app/presentation/widgets/HomePageWidgets/HomePageDiaryCard.dart';
+import 'package:fitness_app/presentation/widgets/HomePageWidgets/HomeProfileBanner.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import '../../widgets/DefaultText.dart';
@@ -18,25 +20,11 @@ class _HomePageState extends State<HomePage> {
             child: Scaffold(
                 backgroundColor: colors.BackgroundColor,
                 body: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.all(8.sp),
-                      child: Container(
-                        height: 100.sp,
-                        width: 100.w,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Colors.white),
-                        child: Column(
-                          children: [
-                            DefaultText.SemiBold(
-                                text: 'Hi, Mohamed',
-                                textcolor: Color.fromARGB(255, 8, 13, 45),
-                                size: 30)
-                          ],
-                        ),
-                      ),
-                    )
+                    HomeProfileBanner(),
+                    HomeDiaryCard(),
                   ],
                 ))));
   }

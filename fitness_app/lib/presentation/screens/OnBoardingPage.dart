@@ -76,7 +76,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       OnPressed: () {
                         if (widget.LastPage == true) {
                           Navigator.pushReplacementNamed(
-                              context, pages.Login_Page);
+                              context, pages.App_Main_Page);
                         } else {
                           onBoardingPageController.nextPage(
                               duration: Duration(milliseconds: 600),

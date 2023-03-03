@@ -17,7 +17,7 @@ class PrimaryButton extends StatelessWidget {
       child: DefaultText.Medium(
           text: buttonText, textcolor: Colors.white, size: 14),
       style: ElevatedButton.styleFrom(
-        minimumSize: Size(80.w, 5.92.h),
+        minimumSize: Size(87.4.w, 5.92.h),
         backgroundColor: colors.ButtonColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
