@@ -58,7 +58,7 @@ final List<OnBoardingModel> onboardinglist = [
                     fontWeight: FontWeight.w500))),
       ]))),
       body:
-          'Immediately join us and start applying for the job you are interested in.'),
+          'Start tracking your calories every meal using only your phone camera.'),
   OnBoardingModel(
       image: 'assets/onboarding/Diet-rafiki.png',
       textContainer: Container(
@@ -89,5 +89,5 @@ final List<OnBoardingModel> onboardinglist = [
                     fontWeight: FontWeight.w500)))
       ]))),
       body:
-          'Explore over 25,924 available job roles and upgrade your operator now.'),
+          'Stop eating junk food and start looking for healthy replacements.'),
 ];
