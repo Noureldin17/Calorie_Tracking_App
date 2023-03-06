@@ -7,6 +7,7 @@ import '../../constants/onboarding_viewlist.dart' as onboardinglist;
 import '../colors.dart' as colors;
 import '../../constants/pages.dart' as pages;
 
+// ignore: must_be_immutable
 class OnBoardingPage extends StatefulWidget {
   OnBoardingPage({super.key, this.LastPage});
   bool? LastPage;

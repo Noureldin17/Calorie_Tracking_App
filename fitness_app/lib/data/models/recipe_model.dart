@@ -11,7 +11,7 @@ class Recipe {
 
   Recipe.fromJson(Map<String, dynamic> json) {
     Label = json['recipe']['label'];
-    ImageUrl = json['recipe']['images']['LARGE'][0];
+    ImageUrl = json['recipe']['images']['LARGE']["url"];
     DietLabels = json['recipe']['dietLabels'];
     Calories = json['recipe']['calories'];
     Weight = json['recipe']['totalWeight'];

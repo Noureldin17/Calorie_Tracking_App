@@ -27,20 +27,22 @@ class HomeDiaryCard extends StatelessWidget {
                 DefaultText.Medium(
                     text: 'Having another \nmeal ?',
                     textcolor: colors.PrimaryTextColor,
-                    size: 24),
+                    size: 18.sp),
                 Padding(
                   padding: EdgeInsets.only(top: 8.sp),
                   child: DefaultText.Medium(
                       text: 'Log your meal directly \nto diary',
                       textcolor: colors.SecondaryTextColor,
-                      size: 16),
+                      size: 12.sp),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 6.sp, left: 8.sp),
                   child: ElevatedButton(
                     onPressed: () {},
                     child: DefaultText.Medium(
-                        text: 'Go to diary', textcolor: Colors.white, size: 14),
+                        text: 'Go to diary',
+                        textcolor: Colors.white,
+                        size: 10.sp),
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(30.w, 4.h),
                       shape: RoundedRectangleBorder(
@@ -57,8 +59,8 @@ class HomeDiaryCard extends StatelessWidget {
           alignment: Alignment.topRight,
           child: Image.asset(
             'assets/illustrations/Healthy options-amico.png',
-            height: 190,
-            width: 190,
+            height: 150.sp,
+            width: 150.sp,
           ),
         )
       ],

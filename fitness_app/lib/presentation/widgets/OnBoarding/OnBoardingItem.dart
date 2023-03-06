@@ -37,11 +37,11 @@ class OnBoardingItem extends StatelessWidget {
                       child: Column(
                         children: [
                           model.textContainer,
-                          Padding(padding: EdgeInsets.all(10)),
+                          Padding(padding: EdgeInsets.all(8.sp)),
                           Text(
                             model.body,
                             style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 12.sp,
                                 fontFamily: 'SF Pro Display',
                                 fontWeight: FontWeight.w300),
                           )

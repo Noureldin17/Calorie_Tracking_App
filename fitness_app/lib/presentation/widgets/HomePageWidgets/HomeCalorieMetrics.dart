@@ -27,7 +27,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                   borderRadius: BorderRadius.circular(22)),
               child: LiquidLinearProgressIndicator(
                   borderColor: Colors.transparent,
-                  valueColor: AlwaysStoppedAnimation(Color(0xFFFFC090)),
+                  valueColor: AlwaysStoppedAnimation(Color(0xFFFFB26B)),
                   borderWidth: 0,
                   borderRadius: 22,
                   backgroundColor: Color(0xFFFDEEDC),
@@ -46,7 +46,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                           child: Center(
                               child: Text(
                             '🔥',
-                            style: TextStyle(fontSize: 22),
+                            style: TextStyle(fontSize: 18.sp),
                           )),
                         ),
                       ),
@@ -55,14 +55,14 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                         child: DefaultText.Bold(
                             text: '2,000',
                             textcolor: colors.PrimaryTextColor,
-                            size: 28),
+                            size: 22.sp),
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 4.sp),
                         child: DefaultText.Medium(
                             text: 'Kcal Eaten',
                             textcolor: colors.SecondaryTextColor,
-                            size: 16),
+                            size: 12.sp),
                       )
                     ],
                   ))),
@@ -71,107 +71,153 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
           children: [
             Padding(
               padding: EdgeInsets.only(bottom: 10.sp, top: 16.sp),
-              child: Container(
-                width: 140.sp,
-                height: 37.sp,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color(0xFFFFDEDE)),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.sp),
-                      child: Container(
-                        padding: EdgeInsets.all(4.sp),
-                        width: 25.sp,
-                        height: 25.sp,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Color(0xFFFFC3C3)),
-                        child: Image.asset(
-                          'assets/icons/meat.png',
-                          color: Color(0xFFF55050),
-                        ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  width: 140.sp,
+                  height: 37.sp,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Color(0xFFFFDEDE)),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      LinearProgressIndicator(
+                        minHeight: 37.sp,
+                        value: 0.5,
+                        backgroundColor: Color(0xFFFFDEDE),
+                        valueColor: AlwaysStoppedAnimation(Color(0xFFFA9494)),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 12.sp),
-                      child: DefaultText.Bold(
-                          text: '70g proteins',
-                          textcolor: colors.PrimaryTextColor,
-                          size: 16),
-                    )
-                  ],
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 10.sp),
+                            child: Container(
+                              padding: EdgeInsets.all(4.sp),
+                              width: 25.sp,
+                              height: 25.sp,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  color: Color(0xFFFFAFAF)),
+                              child: Image.asset(
+                                'assets/icons/meat.png',
+                                color: Color(0xFFF55050),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 12.sp),
+                            child: DefaultText.Bold(
+                                text: '70g proteins',
+                                textcolor: colors.PrimaryTextColor,
+                                size: 12.sp),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: 10.sp),
-              child: Container(
-                width: 140.sp,
-                height: 37.sp,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color(0xFFE1EEDD)),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.sp),
-                      child: Container(
-                        padding: EdgeInsets.all(4.sp),
-                        width: 25.sp,
-                        height: 25.sp,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Color(0xFFC7E8CA)),
-                        child: Image.asset(
-                          'assets/icons/bread.png',
-                          color: Color(0xFF609966),
-                        ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  width: 140.sp,
+                  height: 37.sp,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Color(0xFFE1EEDD)),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      LinearProgressIndicator(
+                        minHeight: 37.sp,
+                        value: 0.3,
+                        backgroundColor: Color(0xFFE1EEDD),
+                        valueColor: AlwaysStoppedAnimation(
+                            Color.fromARGB(255, 190, 225, 182)),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 12.sp),
-                      child: DefaultText.Bold(
-                          text: '120g carbs',
-                          textcolor: colors.PrimaryTextColor,
-                          size: 16),
-                    )
-                  ],
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(left: 10.sp),
+                            child: Container(
+                              padding: EdgeInsets.all(4.sp),
+                              width: 25.sp,
+                              height: 25.sp,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  color: Color(0xFFC7E8CA)),
+                              child: Image.asset(
+                                'assets/icons/bread.png',
+                                color: Color(0xFF609966),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 12.sp),
+                            child: DefaultText.Bold(
+                                text: '120g carbs',
+                                textcolor: colors.PrimaryTextColor,
+                                size: 12.sp),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-            Container(
-              width: 140.sp,
-              height: 37.sp,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Color(0xFFE3DFFD)),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.sp),
-                    child: Container(
-                      padding: EdgeInsets.all(6.sp),
-                      width: 25.sp,
-                      height: 25.sp,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: Color.fromARGB(190, 191, 172, 226)),
-                      child: Image.asset(
-                        'assets/icons/fat.png',
-                        color: Color(0xFFA084DC),
-                      ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Container(
+                width: 140.sp,
+                height: 37.sp,
+                decoration: BoxDecoration(color: Color(0xFFE3DFFD)),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    LinearProgressIndicator(
+                      minHeight: 37.sp,
+                      value: 0.8,
+                      backgroundColor: Color(0xFFE3DFFD),
+                      valueColor: AlwaysStoppedAnimation(Color(0xFFC1AEFC)),
+                      // valueColor: AlwaysStoppedAnimation(Color(0xFFA084CA)),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 12.sp),
-                    child: DefaultText.Bold(
-                        text: '21g fats',
-                        textcolor: colors.PrimaryTextColor,
-                        size: 16),
-                  )
-                ],
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 10.sp),
+                          child: Container(
+                            padding: EdgeInsets.all(6.sp),
+                            width: 25.sp,
+                            height: 25.sp,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                color: Color.fromARGB(255, 215, 204, 246)
+                                // color: Color.fromARGB(212, 160, 132, 220),
+                                // color: Color.fromARGB(190, 191, 172, 226)
+                                ),
+                            child: Image.asset(
+                              'assets/icons/fat.png',
+                              // color: Color.fromARGB(208, 100, 92, 187),
+                              color: Color(0xFFA084DC),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 12.sp),
+                          child: DefaultText.Bold(
+                              text: '21g fats',
+                              textcolor: colors.PrimaryTextColor,
+                              size: 12.sp),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

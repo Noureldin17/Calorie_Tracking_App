@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 import '../presentation/colors.dart' as colors;
 import '../data/models/onboarding_model.dart';
 
@@ -14,14 +15,14 @@ final List<OnBoardingModel> onboardinglist = [
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontWeight: FontWeight.w500))),
         TextSpan(
             text: 'your diary ',
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: colors.PrimaryColor,
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
@@ -29,7 +30,7 @@ final List<OnBoardingModel> onboardinglist = [
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500)))
       ]))),
@@ -45,7 +46,7 @@ final List<OnBoardingModel> onboardinglist = [
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
@@ -53,7 +54,7 @@ final List<OnBoardingModel> onboardinglist = [
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: colors.PrimaryColor,
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
       ]))),
@@ -69,14 +70,14 @@ final List<OnBoardingModel> onboardinglist = [
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontWeight: FontWeight.w500))),
         TextSpan(
             text: 'get in shape, ',
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: colors.PrimaryColor,
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
@@ -84,7 +85,7 @@ final List<OnBoardingModel> onboardinglist = [
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
-                    fontSize: 30,
+                    fontSize: 24.sp,
                     fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500)))
       ]))),

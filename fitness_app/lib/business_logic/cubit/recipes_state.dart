@@ -7,8 +7,10 @@ class RecipesInitial extends RecipesState {}
 
 class RecipesLoadError extends RecipesState {}
 
+class RecipesLoading extends RecipesState {}
+
 class RecipesLoaded extends RecipesState {
   final List<Recipe> recipes;
-
-  RecipesLoaded(this.recipes);
+  final List<Recipe> highproteinrecipes;
+  RecipesLoaded(this.recipes, this.highproteinrecipes);
 }
