@@ -1,7 +1,8 @@
+import 'package:fitness_app/presentation/screens/AppMainPage.dart';
 import 'package:flutter/material.dart';
-import '../../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
 
+import '../../colors.dart' as colors;
 import '../DefaultText.dart';
 
 class HomeDiaryCard extends StatelessWidget {
@@ -16,10 +17,10 @@ class HomeDiaryCard extends StatelessWidget {
           padding: EdgeInsetsDirectional.fromSTEB(16.sp, 10.sp, 16.sp, 0),
           child: Container(
             padding: EdgeInsets.all(10.sp),
-            height: 145.sp,
+            height: 155.sp,
             width: 100.w,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(22),
+                borderRadius: BorderRadius.circular(22.sp),
                 color: colors.CardBackgroundColor),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,24 +28,28 @@ class HomeDiaryCard extends StatelessWidget {
                 DefaultText.Medium(
                     text: 'Having another \nmeal ?',
                     textcolor: colors.PrimaryTextColor,
-                    size: 24),
+                    size: 18.sp),
                 Padding(
                   padding: EdgeInsets.only(top: 8.sp),
                   child: DefaultText.Medium(
                       text: 'Log your meal directly \nto diary',
                       textcolor: colors.SecondaryTextColor,
-                      size: 16),
+                      size: 12.sp),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 6.sp, left: 8.sp),
+                  padding: EdgeInsets.only(top: 6.sp, left: 4.sp),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      streamController.add(1);
+                    },
                     child: DefaultText.Medium(
-                        text: 'Go to diary', textcolor: Colors.white, size: 14),
+                        text: 'Go to diary',
+                        textcolor: Colors.white,
+                        size: 10.sp),
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(30.w, 4.h),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                          borderRadius: BorderRadius.circular(12.sp)),
                       backgroundColor: colors.ButtonColor,
                     ),
                   ),
@@ -54,11 +59,11 @@ class HomeDiaryCard extends StatelessWidget {
           ),
         ),
         Align(
-          alignment: Alignment.topRight,
+          alignment: Alignment(0.7.sp, -0.7.sp),
           child: Image.asset(
             'assets/illustrations/Healthy options-amico.png',
-            height: 190,
-            width: 190,
+            height: 120.sp,
+            width: 120.sp,
           ),
         )
       ],

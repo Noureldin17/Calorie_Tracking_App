@@ -3,10 +3,12 @@ import 'package:fitness_app/presentation/widgets/PrimaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../constants/onboarding_viewlist.dart' as onboardinglist;
-import '../colors.dart' as colors;
-import '../../constants/pages.dart' as pages;
 
+import '../../constants/onboarding_viewlist.dart' as onboardinglist;
+import '../../constants/pages.dart' as pages;
+import '../colors.dart' as colors;
+
+// ignore: must_be_immutable
 class OnBoardingPage extends StatefulWidget {
   OnBoardingPage({super.key, this.LastPage});
   bool? LastPage;
@@ -29,7 +31,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     Container(
                       margin: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       alignment: AlignmentDirectional.topCenter,
-                      height: 500.sp,
+                      height: 560.sp,
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -56,9 +58,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                               controller: onBoardingPageController,
                               count: onboardinglist.onboardinglist.length,
                               effect: ExpandingDotsEffect(
-                                  dotHeight: 6,
-                                  dotWidth: 6,
-                                  expansionFactor: 2,
+                                  dotHeight: 6.sp,
+                                  dotWidth: 6.sp,
+                                  expansionFactor: 2.sp,
                                   activeDotColor:
                                       Color.fromARGB(255, 51, 102, 255),
                                   dotColor: Color.fromARGB(255, 173, 200, 255)),

@@ -3,7 +3,7 @@ import 'package:fitness_app/presentation/widgets/HomePageWidgets/HomePageDiaryCa
 import 'package:fitness_app/presentation/widgets/HomePageWidgets/HomeProfileBanner.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import '../../widgets/DefaultText.dart';
+
 import '../../colors.dart' as colors;
 
 class HomePage extends StatefulWidget {
