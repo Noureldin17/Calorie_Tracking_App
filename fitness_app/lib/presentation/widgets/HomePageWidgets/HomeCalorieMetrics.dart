@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
-import '../../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
 
+import '../../colors.dart' as colors;
 import '../DefaultText.dart';
 
 class HomeCalorieMetrics extends StatefulWidget {
@@ -46,7 +46,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                           child: Center(
                               child: Text(
                             '🔥',
-                            style: TextStyle(fontSize: 22),
+                            style: TextStyle(fontSize: 22.sp),
                           )),
                         ),
                       ),
@@ -55,14 +55,14 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                         child: DefaultText.Bold(
                             text: '2,000',
                             textcolor: colors.PrimaryTextColor,
-                            size: 28),
+                            size: 28.sp),
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 4.sp),
                         child: DefaultText.Medium(
                             text: 'Kcal Eaten',
                             textcolor: colors.SecondaryTextColor,
-                            size: 16),
+                            size: 16.sp),
                       )
                     ],
                   ))),
@@ -99,7 +99,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                       child: DefaultText.Bold(
                           text: '70g proteins',
                           textcolor: colors.PrimaryTextColor,
-                          size: 16),
+                          size: 12.sp),
                     )
                   ],
                 ),
@@ -135,7 +135,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                       child: DefaultText.Bold(
                           text: '120g carbs',
                           textcolor: colors.PrimaryTextColor,
-                          size: 16),
+                          size: 12.sp),
                     )
                   ],
                 ),
@@ -169,7 +169,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                     child: DefaultText.Bold(
                         text: '21g fats',
                         textcolor: colors.PrimaryTextColor,
-                        size: 16),
+                        size: 12.sp),
                   )
                 ],
               ),

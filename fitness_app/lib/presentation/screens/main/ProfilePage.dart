@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+
 import '../../colors.dart' as colors;
 import '../../widgets/DefaultText.dart';
 
@@ -16,7 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: colors.BackgroundColor,
       body: Center(
           child: DefaultText.Medium(
-              text: 'Profile Page', textcolor: Colors.black, size: 30)),
+              text: 'Profile Page', textcolor: Colors.black, size: 30.sp)),
     );
   }
 }

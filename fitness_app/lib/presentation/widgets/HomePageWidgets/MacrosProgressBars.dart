@@ -1,6 +1,7 @@
 import 'package:fitness_app/presentation/widgets/DefaultText.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
 import '../../colors.dart' as colors;
 
 class MacrosProgressBar extends StatefulWidget {
@@ -49,7 +50,7 @@ class _MacrosProgressBarState extends State<MacrosProgressBar> {
                         DefaultText.Bold(
                             text: '70%',
                             textcolor: colors.PrimaryTextColor,
-                            size: 16)
+                            size: 16.sp)
                       ],
                     ),
                     Padding(
@@ -57,14 +58,14 @@ class _MacrosProgressBarState extends State<MacrosProgressBar> {
                       child: DefaultText.Bold(
                           text: 'Proteins',
                           textcolor: colors.PrimaryTextColor,
-                          size: 14),
+                          size: 14.sp),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 2.sp),
                       child: DefaultText.SemiBold(
                           text: '32g',
                           textcolor: colors.SecondaryTextColor,
-                          size: 14),
+                          size: 14.sp),
                     )
                   ],
                 ),
@@ -94,14 +95,14 @@ class _MacrosProgressBarState extends State<MacrosProgressBar> {
                       child: DefaultText.Bold(
                           text: 'Carbs',
                           textcolor: colors.PrimaryTextColor,
-                          size: 14),
+                          size: 14.sp),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 2.sp),
                       child: DefaultText.SemiBold(
                           text: '32g',
                           textcolor: colors.SecondaryTextColor,
-                          size: 14),
+                          size: 14.sp),
                     )
                   ],
                 ),
@@ -131,14 +132,14 @@ class _MacrosProgressBarState extends State<MacrosProgressBar> {
                       child: DefaultText.Bold(
                           text: 'Fats',
                           textcolor: colors.PrimaryTextColor,
-                          size: 14),
+                          size: 14.sp),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 2.sp),
                       child: DefaultText.SemiBold(
                           text: '32g',
                           textcolor: colors.SecondaryTextColor,
-                          size: 14),
+                          size: 14.sp),
                     )
                   ],
                 ),

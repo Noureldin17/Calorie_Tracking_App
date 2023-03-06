@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
 import '../../../data/models/onboarding_model.dart';
 import '../../colors.dart' as colors;
 
@@ -27,7 +28,7 @@ class OnBoardingItem extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 18.sp, right: 18.sp),
                     child: Container(
-                      height: 165.sp,
+                      height: 220.sp,
                       padding: EdgeInsets.all(10.sp),
                       decoration: BoxDecoration(
                           border:
@@ -41,7 +42,7 @@ class OnBoardingItem extends StatelessWidget {
                           Text(
                             model.body,
                             style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 14.sp,
                                 fontFamily: 'SF Pro Display',
                                 fontWeight: FontWeight.w300),
                           )
