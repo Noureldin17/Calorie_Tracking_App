@@ -1,6 +1,10 @@
+import 'package:fitness_app/business_logic/cubit/recipes_cubit.dart';
+import 'package:fitness_app/data/repository/recipes_repository.dart';
+import 'package:fitness_app/data/web_services/recipes_web_service.dart';
 import 'package:fitness_app/presentation/screens/main/HomePage.dart';
 import 'package:fitness_app/presentation/screens/main/ProfilePage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
 import '../colors.dart' as colors;
@@ -11,7 +15,10 @@ class AppMainPage extends StatefulWidget {
   AppMainPage({super.key});
   int currentIndex = 0;
   List<Widget> mainPages = [
-    HomePage(),
+    BlocProvider(
+      create: (context) => RecipesCubit(RecipesRepository(RecipesWebService())),
+      child: HomePage(),
+    ),
     DiaryPage(),
     ProfilePage(),
   ];
