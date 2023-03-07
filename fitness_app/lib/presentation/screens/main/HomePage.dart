@@ -63,8 +63,8 @@ class _HomePageState extends State<HomePage> {
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Padding(
-                                  padding:
-                                      EdgeInsets.only(top: 10.sp, left: 6.sp),
+                                  padding: EdgeInsets.only(
+                                      top: 10.sp, left: 6.sp, right: 16.sp),
                                   child: Row(
                                     children: [
                                       ...recipes.map((recipe) => RecipesItem(
@@ -82,16 +82,21 @@ class _HomePageState extends State<HomePage> {
                             ],
                           );
                         } else if (state is RecipesLoading) {
-                          return Center(
-                              child: CircularProgressIndicator(
-                            color: colors.PrimaryTextColor,
-                          )
-                              // Image.asset(
-                              //   'assets/Spinner.gif',
-                              //   height: 70.sp,
-                              //   width: 70.sp,
-                              // ),
-                              );
+                          return Padding(
+                            padding: EdgeInsets.only(top: 50.sp),
+                            child: Center(
+                                child: CircularProgressIndicator(
+                              color: colors.PrimaryTextColor,
+                            )
+                                // Image.asset(
+                                //   'assets/Spinner.gif',
+                                //   height: 70.sp,
+                                //   width: 70.sp,
+                                // ),
+                                ),
+                          );
+                        } else if (state is RecipesLoadError) {
+                          return Text('ERROR LOADING DATA...');
                         } else {
                           return Text('data');
                         }
@@ -110,8 +115,8 @@ class _HomePageState extends State<HomePage> {
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Padding(
-                                  padding:
-                                      EdgeInsets.only(top: 10.sp, left: 6.sp),
+                                  padding: EdgeInsets.only(
+                                      top: 10.sp, left: 6.sp, right: 16.sp),
                                   child: Row(
                                     children: [
                                       ...HPrecipes.map((recipe) => RecipesItem(
@@ -121,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                                               100,
                                           RecipeName: recipe.Label!,
                                           RecipeImage: recipe.ImageUrl!,
-                                          DietLabel: recipe.DietLabels![0]))
+                                          DietLabel: recipe.DietLabels![0])),
                                     ],
                                   ),
                                 ),
@@ -134,12 +139,6 @@ class _HomePageState extends State<HomePage> {
                             child: Center(
                                 child: CircularProgressIndicator(
                               color: colors.PrimaryTextColor,
-
-                              // Image.asset(
-                              //   'assets/Spinner.gif',
-                              //   height: 70.sp,
-                              //   width: 70.sp,
-                              // ),
                             )),
                           );
                         } else {

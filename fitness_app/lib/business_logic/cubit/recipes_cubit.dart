@@ -18,10 +18,10 @@ class RecipesCubit extends Cubit<RecipesState> {
   List<Recipe> getBalancedRecipes() {
     emit(RecipesLoading());
     try {
+      this.recipes = recipes;
       recipesRepository.getRecipes('balanced').then((recipes) {
         loads++;
-        if (loads == 2) emit(RecipesLoaded(recipes, highproteinrecipes));
-        this.recipes = recipes;
+        if (loads == 2) emit(RecipesLoaded(recipes, this.highproteinrecipes));
       });
     } catch (_) {
       emit(RecipesLoadError());
@@ -32,10 +32,10 @@ class RecipesCubit extends Cubit<RecipesState> {
   List<Recipe> getHighProteinRecipes() {
     emit(RecipesLoading());
     try {
-      recipesRepository.getRecipes('high-protein').then((recipes) {
+      recipesRepository.getHighProteinRecipes('high-protein').then((HPrecipes) {
+        this.highproteinrecipes = HPrecipes;
         loads++;
-        if (loads == 2) emit(RecipesLoaded(recipes, highproteinrecipes));
-        this.highproteinrecipes = recipes;
+        if (loads == 2) emit(RecipesLoaded(this.recipes, HPrecipes));
       });
     } catch (_) {
       emit(RecipesLoadError());

@@ -23,7 +23,6 @@ final List<OnBoardingModel> onboardinglist = [
                 textStyle: TextStyle(
                     color: colors.PrimaryColor,
                     fontSize: 24.sp,
-                    fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
             text: "and track calories ",
@@ -31,7 +30,6 @@ final List<OnBoardingModel> onboardinglist = [
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
                     fontSize: 24.sp,
-                    fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500)))
       ]))),
       body:
@@ -47,7 +45,6 @@ final List<OnBoardingModel> onboardinglist = [
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
                     fontSize: 24.sp,
-                    fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
             text: 'FOODPIC',
@@ -55,7 +52,6 @@ final List<OnBoardingModel> onboardinglist = [
                 textStyle: TextStyle(
                     color: colors.PrimaryColor,
                     fontSize: 24.sp,
-                    fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
       ]))),
       body:
@@ -78,7 +74,6 @@ final List<OnBoardingModel> onboardinglist = [
                 textStyle: TextStyle(
                     color: colors.PrimaryColor,
                     fontSize: 24.sp,
-                    fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500))),
         TextSpan(
             text: "enjoy a healthy lifestyle",
@@ -86,7 +81,6 @@ final List<OnBoardingModel> onboardinglist = [
                 textStyle: TextStyle(
                     color: Color.fromARGB(255, 17, 24, 39),
                     fontSize: 24.sp,
-                    fontFamily: 'SF Pro Display',
                     fontWeight: FontWeight.w500)))
       ]))),
       body:

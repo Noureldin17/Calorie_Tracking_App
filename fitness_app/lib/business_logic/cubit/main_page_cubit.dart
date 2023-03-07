@@ -4,6 +4,7 @@ import 'package:fitness_app/data/web_services/recipes_web_service.dart';
 import 'package:fitness_app/presentation/screens/main/DiaryPage.dart';
 import 'package:fitness_app/presentation/screens/main/HomePage.dart';
 import 'package:fitness_app/presentation/screens/main/ProfilePage.dart';
+import 'package:fitness_app/presentation/screens/main/RecipesPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,6 +22,7 @@ class MainPageCubit extends Cubit<MainPageState> {
       create: (context) => RecipesCubit(RecipesRepository(RecipesWebService())),
       child: HomePage(),
     ),
+    RecipesPage(),
     DiaryPage(),
     ProfilePage(),
   ];

@@ -37,6 +37,7 @@ class _AppMainPageState extends State<AppMainPage> {
                   child: BottomNavigationBar(
                     // backgroundColor: Color.fromARGB(208, 116, 66, 241),
                     backgroundColor: colors.PrimaryColor,
+
                     elevation: 0,
                     enableFeedback: false,
                     type: BottomNavigationBarType.fixed,
@@ -68,6 +69,28 @@ class _AppMainPageState extends State<AppMainPage> {
                             ),
                           ),
                           label: 'Home'),
+                      BottomNavigationBarItem(
+                          activeIcon: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 4),
+                            child: SvgPicture.asset(
+                              'assets/icons/navbar/book-active.svg',
+                              color: Colors.white,
+                              height: 24,
+                              width: 24,
+                            ),
+                          ),
+                          icon: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0, 0, 0, 4),
+                            child: SvgPicture.asset(
+                              'assets/icons/navbar/book.svg',
+                              height: 24,
+                              width: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                          label: 'Diary'),
                       BottomNavigationBarItem(
                           activeIcon: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(

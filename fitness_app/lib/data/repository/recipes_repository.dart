@@ -11,8 +11,8 @@ class RecipesRepository {
     return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
   }
 
-  // Future<List<Recipe>> getHighProteinRecipes() async {
-  //   final recipes = await recipesWebService.getRecipes();
-  //   return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
-  // }
+  Future<List<Recipe>> getHighProteinRecipes(String diet) async {
+    final recipes = await recipesWebService.getRecipes(diet);
+    return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
+  }
 }
