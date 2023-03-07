@@ -1,0 +1,53 @@
+[2:18:08 PM]: Spawning C:\src\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","-d","180428a7","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart"]
+[2:18:08 PM]: ..  in D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app
+[2:18:08 PM]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
+[2:18:08 PM]: PID: 16432
+[2:18:10 PM]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":6092}}]
+[2:18:10 PM]: <== [{"event":"app.start","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","deviceId":"180428a7","directory":"D:\\Calorie_Tracking_App-master\\Calorie_Tracking_App\\fitness_app","supportsRestart":true,"launchMode":"run"}}]
+[2:18:10 PM]: <== Launching lib\main.dart on CPH2235 in debug mode...
+[2:18:11 PM]: <== [{"event":"app.progress","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
+[2:19:31 PM]: <== [{"event":"app.progress","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","id":"0","progressId":null,"finished":true}}]
+[2:19:32 PM]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
+[2:19:33 PM]: <== [{"event":"app.progress","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","id":"1","progressId":null,"message":"Installing build\\app\\outputs\\flutter-apk\\app-debug.apk...","finished":false}}]
+[2:19:37 PM]: <== [{"event":"app.progress","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","id":"1","progressId":null,"finished":true}}]
+[2:19:41 PM]: <== [{"event":"app.debugPort","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","port":54208,"wsUri":"ws://127.0.0.1:54208/GYJ52_g7qRE=/ws","baseUri":"file:///data/user/0/com.example.fitness_app/code_cache/fitness_appVJTTFU/fitness_app/"}}]
+[2:19:41 PM]: <== [{"event":"app.progress","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","id":"2","progressId":null,"message":"Syncing files to device CPH2235...","finished":false}}]
+[2:19:41 PM]: <== [{"event":"app.progress","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6","id":"2","progressId":null,"finished":true}}]
+[2:19:41 PM]: <== [{"event":"app.started","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6"}}]
+[2:19:44 PM]: <== D/SurfaceComposerClient(16025): VRR [FRTC] client handle [bufferId:18446744073709551615 framenumber:0] [ffffffff, ffffffff]
+[2:19:44 PM]: <== D/ViewRootImpl[MainActivity](16025):  debugCancelDraw  cancelDraw=false,count = 231,android.view.ViewRootImpl@30bb7ee
+[2:19:44 PM]: <== D/SurfaceComposerClient(16025): VRR [FRTC] client handle [bufferId:18446744073709551615 framenumber:0] [ffffffff, ffffffff]
+[2:20:01 PM]: <== D/OplusSystemUINavigationGesture(16025): [GESTURE_BUTTON] swipe from 1
+[2:20:01 PM]: <== D/OplusSystemUINavigationGesture(16025): [GESTURE_BUTTON] Hit Gesture Region !
+[2:20:01 PM]: <== D/OplusSystemUINavigationGesture(16025): [GESTURE_BUTTON] trigger!
+[2:20:02 PM]: <== D/Activity(16025): dispatchKeyEvent to com.example.fitness_app.MainActivity@e1c048f will call onBackPressed
+[2:20:02 PM]: <== E/BLASTBufferQueue(16025): BLASTBufferItemConsumer::onDisconnect()
+[2:20:02 PM]: <== E/BLASTBufferQueue(16025): BLASTBufferItemConsumer::onDisconnect()
+[2:20:03 PM]: <== D/OplusScrollToTopManager(16025): unregisterGuidePopupDismissReceiverInSystemUI
+[2:20:03 PM]: <== D/OplusScrollToTopManager(16025): Receiver not registered: android.view.OplusScrollToTopManager$1@e901b4c
+[2:20:03 PM]: <== D/OplusScrollToTopManager(16025): unregisterSystemUIBroadcastReceiver
+[2:20:03 PM]: <== D/OplusScrollToTopManager(16025): java.lang.IllegalArgumentException: Receiver not registered: android.view.OplusScrollToTopManager$2@474f795
+[2:20:03 PM]: <== V/OplusZoomWindowDecorViewHelper(16025): removeZoomView
+[2:20:03 PM]: <== I/Choreographer(16025): Skipped 42 frames!  The application may be doing too much work on its main thread.
+[2:20:07 PM]: <== W/ple.fitness_ap(16025): Cleared Reference was only reachable from finalizer (only reported once)
+[2:20:12 PM]: <== I/Quality (16025): ActivityThread: activityStart delay 130 com.example.fitness_app 16025
+[2:20:12 PM]: <== D/WindowManager(16025): Add to mViews: DecorView@9bb214[MainActivity],pkg= com.example.fitness_app
+[2:20:12 PM]: <== V/OplusZoomWindowDecorViewHelper(16025): setLastReportedMergedConfiguration mZoomDisplayHeight: 2400 getDecorView.10203668
+[2:20:12 PM]: <== I/Quality (16025): Skipped: false 1 cost 32.38014 refreshRate 0 processName com.example.fitness_app
+[2:20:12 PM]: <== D/ViewRootImpl[MainActivity](16025):  debugCancelDraw some OnPreDrawListener onPreDraw return false,cancelDraw=true,count=50,android.view.ViewRootImpl@58028b2
+[2:20:14 PM]: <== D/SurfaceComposerClient(16025): VRR [FRTC] client handle [bufferId:18446744073709551615 framenumber:0] [ffffffff, ffffffff]
+[2:20:14 PM]: <== D/ViewRootImpl[MainActivity](16025):  debugCancelDraw  cancelDraw=false,count = 133,android.view.ViewRootImpl@58028b2
+[2:20:14 PM]: <== D/SurfaceComposerClient(16025): VRR [FRTC] client handle [bufferId:18446744073709551615 framenumber:0] [ffffffff, ffffffff]
+[2:20:29 PM]: <== D/OplusSystemUINavigationGesture(16025): [GESTURE_BUTTON] swipe from 1
+[2:20:29 PM]: <== D/OplusSystemUINavigationGesture(16025): [GESTURE_BUTTON] Hit Gesture Region !
+[2:20:29 PM]: <== D/Activity(16025): dispatchKeyEvent to com.example.fitness_app.MainActivity@fa3c003 will call onBackPressed
+[2:20:30 PM]: <== E/BLASTBufferQueue(16025): BLASTBufferItemConsumer::onDisconnect()
+[2:20:30 PM]: <== E/BLASTBufferQueue(16025): BLASTBufferItemConsumer::onDisconnect()
+[2:20:31 PM]: <== D/OplusScrollToTopManager(16025): unregisterGuidePopupDismissReceiverInSystemUI
+[2:20:31 PM]: <== D/OplusScrollToTopManager(16025): Receiver not registered: android.view.OplusScrollToTopManager$1@a4beed6
+[2:20:31 PM]: <== D/OplusScrollToTopManager(16025): unregisterSystemUIBroadcastReceiver
+[2:20:31 PM]: <== D/OplusScrollToTopManager(16025): java.lang.IllegalArgumentException: Receiver not registered: android.view.OplusScrollToTopManager$2@49e1557
+[2:20:31 PM]: <== V/OplusZoomWindowDecorViewHelper(16025): removeZoomView
+[2:20:31 PM]: <== I/Choreographer(16025): Skipped 69 frames!  The application may be doing too much work on its main thread.
+[2:20:32 PM]: <== Lost connection to device.
+[2:20:32 PM]: <== [{"event":"app.stop","params":{"appId":"ddade695-724d-4b6f-b563-295250df0ef6"}}]
