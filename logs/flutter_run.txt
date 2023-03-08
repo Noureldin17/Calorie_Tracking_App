@@ -1,0 +1,4 @@
+[12:57:24 AM]: Spawning C:\src\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","-d","180428a7","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart"]
+[12:57:25 AM]: ..  in D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app
+[12:57:25 AM]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
+[12:57:25 AM]: PID: 1628

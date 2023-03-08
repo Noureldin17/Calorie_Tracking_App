@@ -11,47 +11,55 @@ class OnBoardingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(
-        builder: (context, orientation, deviceType) => Container(
-              decoration: BoxDecoration(),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                    child: Image.asset(
-                      model.image,
-                      fit: BoxFit.fill,
+      builder: (context, orientation, deviceType) => Container(
+        height: orientation == Orientation.portrait ? 80.h : 69.w,
+        child: OrientationBuilder(
+          builder: (context, orientation) {
+            return GridView.count(
+              physics: NeverScrollableScrollPhysics(),
+              crossAxisCount: orientation == Orientation.portrait ? 1 : 2,
+              children: [
+                Padding(
+                  padding: orientation == Orientation.portrait
+                      ? EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0)
+                      : EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20.w),
+                  child: Image.asset(
+                    model.image,
+                    fit: orientation == Orientation.portrait
+                        ? BoxFit.fitHeight
+                        : BoxFit.fitWidth,
+                  ),
+                ),
+                Padding(
+                  padding:
+                      EdgeInsets.only(left: 18.sp, right: 18.sp, bottom: 18.h),
+                  child: Container(
+                    padding: EdgeInsets.all(10.sp),
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 0.1, color: Colors.transparent),
+                      borderRadius: BorderRadius.circular(18.sp),
+                      color: colors.CardBackgroundColor,
+                    ),
+                    child: Column(
+                      children: [
+                        model.textContainer,
+                        Padding(padding: EdgeInsets.all(10)),
+                        Text(
+                          model.body,
+                          style: TextStyle(
+                              fontSize: 14.sp,
+                              fontFamily: 'SF Pro Display',
+                              fontWeight: FontWeight.w300),
+                        )
+                      ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 18.sp, right: 18.sp),
-                    child: Container(
-                      height: 220.sp,
-                      padding: EdgeInsets.all(10.sp),
-                      decoration: BoxDecoration(
-                          border:
-                              Border.all(width: 0.1, color: Colors.transparent),
-                          borderRadius: BorderRadius.circular(9),
-                          color: colors.CardBackgroundColor),
-                      child: Column(
-                        children: [
-                          model.textContainer,
-                          Padding(padding: EdgeInsets.all(10)),
-                          Text(
-                            model.body,
-                            style: TextStyle(
-                                fontSize: 14.sp,
-                                fontFamily: 'SF Pro Display',
-                                fontWeight: FontWeight.w300),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ));
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
   }
 }

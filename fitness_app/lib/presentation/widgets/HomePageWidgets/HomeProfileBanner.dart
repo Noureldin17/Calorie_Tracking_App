@@ -16,8 +16,8 @@ class HomeProfileBanner extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(
             bottom: 10.sp, left: 16.sp, right: 16.sp, top: 10.sp),
-        height: 70.sp,
-        width: 100.w,
+        height: 78.sp,
+        width: double.infinity,
         decoration: BoxDecoration(
             border: Border.all(width: 0, color: Colors.transparent),
             borderRadius: BorderRadius.circular(22),
