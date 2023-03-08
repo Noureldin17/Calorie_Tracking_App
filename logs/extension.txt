@@ -1,0 +1,279 @@
+!! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
+
+Dart Code extension: 3.60.1
+Flutter extension: 3.60.0 (not activated)
+
+App: Visual Studio Code
+Version: 1.76.0
+Platform: win
+
+HTTP_PROXY: undefined
+NO_PROXY: undefined
+
+Logging Categories:
+    General
+
+Wed Mar 08 2023 [19:56:50 GMT+0200 (Eastern European Standard Time)] Log file started
+[7:56:50 PM] [General] [Info] Searching for SDKs...
+[7:56:50 PM] [General] [Info] Environment PATH:
+[7:56:50 PM] [General] [Info]     C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin
+[7:56:50 PM] [General] [Info]     C:\Python311\Scripts\
+[7:56:50 PM] [General] [Info]     C:\Python311\
+[7:56:50 PM] [General] [Info]     C:\Program Files\Common Files\Oracle\Java\javapath
+[7:56:50 PM] [General] [Info]     C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+[7:56:50 PM] [General] [Info]     C:\Program Files\AdoptOpenJDK\jre-8.0.292.10-hotspot\bin
+[7:56:50 PM] [General] [Info]     C:\Program Files\AdoptOpenJDK\jre-11.0.11.9-hotspot\bin
+[7:56:50 PM] [General] [Info]     C:\Windows\system32
+[7:56:50 PM] [General] [Info]     C:\Windows
+[7:56:50 PM] [General] [Info]     C:\Windows\System32\Wbem
+[7:56:50 PM] [General] [Info]     C:\Windows\System32\WindowsPowerShell\v1.0\
+[7:56:50 PM] [General] [Info]     C:\Windows\System32\OpenSSH\
+[7:56:50 PM] [General] [Info]     C:\Program Files\Microsoft VS Code\bin
+[7:56:50 PM] [General] [Info]     C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+[7:56:50 PM] [General] [Info]     C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL
+[7:56:50 PM] [General] [Info]     C:\Program Files\Intel\Intel(R) Management Engine Components\DAL
+[7:56:50 PM] [General] [Info]     C:\Program Files\dotnet\
+[7:56:50 PM] [General] [Info]     C:\Program Files\MATLAB\R2022a\runtime\win64
+[7:56:50 PM] [General] [Info]     C:\Program Files\MATLAB\R2022a\bin
+[7:56:50 PM] [General] [Info]     C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+[7:56:50 PM] [General] [Info]     C:\ProgramData\chocolatey\bin
+[7:56:50 PM] [General] [Info]     C:\Program Files\nodejs\
+[7:56:50 PM] [General] [Info]     C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+[7:56:50 PM] [General] [Info]     C:\Program Files\Git\cmd
+[7:56:50 PM] [General] [Info]     C:\Program Files\Microsoft SQL Server\150\Tools\Binn\
+[7:56:50 PM] [General] [Info]     C:\Program Files\MySQL\MySQL Shell 8.0\bin\
+[7:56:50 PM] [General] [Info]     C:\Users\youse\AppData\Local\Programs\Python\Python39\Scripts\
+[7:56:50 PM] [General] [Info]     C:\Users\youse\AppData\Local\Programs\Python\Python39\
+[7:56:50 PM] [General] [Info]     C:\Users\youse\AppData\Local\Microsoft\WindowsApps
+[7:56:50 PM] [General] [Info]     C:\msys64\mingw64\bin
+[7:56:50 PM] [General] [Info]     C:\Users\youse\.dotnet\tools
+[7:56:50 PM] [General] [Info]     C:\src\flutter\bin
+[7:56:50 PM] [General] [Info]     C:\Users\youse\AppData\Roaming\npm
+[7:56:50 PM] [General] [Info]     C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.2\bin
+[7:56:50 PM] [General] [Info]     C:\Users\youse\.dotnet\tools
+[7:56:50 PM] [General] [Info]     C:\Users\youse\AppData\Local\GitHubDesktop\bin
+[7:56:50 PM] [General] [Info]     C:\ProgramData\youse\GitHubDesktop\bin
+[7:56:51 PM] [General] [Info] Took 623ms to search for projects (5 levels)
+[7:56:51 PM] [General] [Info] Took 6ms to filter out excluded projects (0 exclusion rules)
+[7:56:51 PM] [General] [Info] Found Flutter project at D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app:
+			Mobile? true
+			Web? false
+			Create Trigger? false
+			Flutter Repo? false
+[7:56:51 PM] [General] [Info] Searching for flutter.bat
+[7:56:51 PM] [General] [Info]     Looking for flutter.bat in:
+[7:56:51 PM] [General] [Info]         D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app
+[7:56:51 PM] [General] [Info]         D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\
+[7:56:51 PM] [General] [Info]         D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app\.flutter
+[7:56:51 PM] [General] [Info]         D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app\.flutter\bin
+[7:56:51 PM] [General] [Info]         D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app\vendor\flutter
+[7:56:51 PM] [General] [Info]         D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app\vendor\flutter\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\flutter-sdk
+[7:56:51 PM] [General] [Info]         C:\Users\youse\flutter-sdk\bin
+[7:56:51 PM] [General] [Info]         /google/flutter
+[7:56:51 PM] [General] [Info]         \google\flutter\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin
+[7:56:51 PM] [General] [Info]         C:\Python311\Scripts\
+[7:56:51 PM] [General] [Info]         C:\Python311\Scripts\bin
+[7:56:51 PM] [General] [Info]         C:\Python311\
+[7:56:51 PM] [General] [Info]         C:\Python311\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath
+[7:56:51 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\AdoptOpenJDK\jre-8.0.292.10-hotspot\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\AdoptOpenJDK\jre-11.0.11.9-hotspot\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\system32
+[7:56:51 PM] [General] [Info]         C:\Windows\system32\bin
+[7:56:51 PM] [General] [Info]         C:\Windows
+[7:56:51 PM] [General] [Info]         C:\Windows\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\Wbem
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\Wbem\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\OpenSSH\
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\OpenSSH\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft VS Code\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Intel\Intel(R) Management Engine Components\DAL
+[7:56:51 PM] [General] [Info]         C:\Program Files\Intel\Intel(R) Management Engine Components\DAL\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\dotnet\
+[7:56:51 PM] [General] [Info]         C:\Program Files\dotnet\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\MATLAB\R2022a\runtime\win64
+[7:56:51 PM] [General] [Info]         C:\Program Files\MATLAB\R2022a\runtime\win64\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\MATLAB\R2022a\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+[7:56:51 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin
+[7:56:51 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\nodejs\
+[7:56:51 PM] [General] [Info]         C:\Program Files\nodejs\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Git\cmd
+[7:56:51 PM] [General] [Info]         C:\Program Files\Git\cmd\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft SQL Server\150\Tools\Binn\
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft SQL Server\150\Tools\Binn\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\MySQL\MySQL Shell 8.0\bin\
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\Scripts\
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\Scripts\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Microsoft\WindowsApps
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Microsoft\WindowsApps\bin
+[7:56:51 PM] [General] [Info]         C:\msys64\mingw64\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Roaming\npm
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Roaming\npm\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.2\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\GitHubDesktop\bin
+[7:56:51 PM] [General] [Info]         C:\ProgramData\youse\GitHubDesktop\bin
+[7:56:51 PM] [General] [Info]     Found at:
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin
+[7:56:51 PM] [General] [Info]     Candidate paths to be post-filtered:
+[7:56:51 PM] [General] [Info]         C:\src\flutter
+[7:56:51 PM] [General] [Info]         C:\src\flutter
+[7:56:51 PM] [General] [Info]     Found at C:\src\flutter
+[7:56:51 PM] [General] [Info]     Returning SDK path C:\src\flutter for flutter.bat
+[7:56:51 PM] [General] [Info] Searching for dart.exe
+[7:56:51 PM] [General] [Info]     Looking for dart.exe in:
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin
+[7:56:51 PM] [General] [Info]         C:\Python311\Scripts\
+[7:56:51 PM] [General] [Info]         C:\Python311\Scripts\bin
+[7:56:51 PM] [General] [Info]         C:\Python311\
+[7:56:51 PM] [General] [Info]         C:\Python311\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath
+[7:56:51 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\AdoptOpenJDK\jre-8.0.292.10-hotspot\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\AdoptOpenJDK\jre-11.0.11.9-hotspot\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\system32
+[7:56:51 PM] [General] [Info]         C:\Windows\system32\bin
+[7:56:51 PM] [General] [Info]         C:\Windows
+[7:56:51 PM] [General] [Info]         C:\Windows\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\Wbem
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\Wbem\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\bin
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\OpenSSH\
+[7:56:51 PM] [General] [Info]         C:\Windows\System32\OpenSSH\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft VS Code\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Intel\Intel(R) Management Engine Components\DAL
+[7:56:51 PM] [General] [Info]         C:\Program Files\Intel\Intel(R) Management Engine Components\DAL\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\dotnet\
+[7:56:51 PM] [General] [Info]         C:\Program Files\dotnet\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\MATLAB\R2022a\runtime\win64
+[7:56:51 PM] [General] [Info]         C:\Program Files\MATLAB\R2022a\runtime\win64\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\MATLAB\R2022a\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+[7:56:51 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin
+[7:56:51 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\nodejs\
+[7:56:51 PM] [General] [Info]         C:\Program Files\nodejs\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+[7:56:51 PM] [General] [Info]         C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Git\cmd
+[7:56:51 PM] [General] [Info]         C:\Program Files\Git\cmd\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft SQL Server\150\Tools\Binn\
+[7:56:51 PM] [General] [Info]         C:\Program Files\Microsoft SQL Server\150\Tools\Binn\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\MySQL\MySQL Shell 8.0\bin\
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\Scripts\
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\Scripts\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Programs\Python\Python39\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Microsoft\WindowsApps
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\Microsoft\WindowsApps\bin
+[7:56:51 PM] [General] [Info]         C:\msys64\mingw64\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Roaming\npm
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Roaming\npm\bin
+[7:56:51 PM] [General] [Info]         C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.3.2\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools
+[7:56:51 PM] [General] [Info]         C:\Users\youse\.dotnet\tools\bin
+[7:56:51 PM] [General] [Info]         C:\Users\youse\AppData\Local\GitHubDesktop\bin
+[7:56:51 PM] [General] [Info]         C:\ProgramData\youse\GitHubDesktop\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk\bin
+[7:56:51 PM] [General] [Info]     Found at:
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk\bin
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk\bin
+[7:56:51 PM] [General] [Info]     Candidate paths to be post-filtered:
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]         C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]     Found at C:\src\flutter\bin\cache\dart-sdk
+[7:56:51 PM] [General] [Info]     Returning SDK path C:\src\flutter\bin\cache\dart-sdk for dart.exe
+[7:56:51 PM] [General] [Info] Experiment random number is 57 for experiment 'sdkDaps'. Experiment is enabled for <= 10
+[7:56:51 PM] [General] [Info] Experiment 'sdkDaps' does not apply and will not be activated
+[7:56:51 PM] [General] [Info] !! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
+
+Dart Code extension: 3.60.1
+Flutter extension: 3.60.0 (not activated)
+
+App: Visual Studio Code
+Version: 1.76.0
+Platform: win
+
+Workspace type: Flutter
+Analyzer type: LSP
+Multi-root?: false
+
+Dart SDK:
+    Loc: C:\src\flutter\bin\cache\dart-sdk
+    Ver: 2.19.3
+Flutter SDK:
+    Loc: C:\src\flutter
+    Ver: 3.7.6
+
+HTTP_PROXY: undefined
+NO_PROXY: undefined
+[7:56:51 PM] [General] [Info] Returning cached results for project search
+[7:56:51 PM] [General] [Info] Activating Flutter extension for Flutter project...
+[7:56:51 PM] [General] [Info] Extension:Startup timing: 778ms
+[7:56:51 PM] [General] [Info] Version last used for Pub is 2.19.3 (2.19.0), current is 2.19.3 (2.19.0)
+[7:56:51 PM] [General] [Info] Found 1 folders requiring "pub get" or "pub upgrade":
+    D:\Calorie_Tracking_App-master\Calorie_Tracking_App\fitness_app (get: true, upgrade: false)
+[7:56:51 PM] [General] [Info] Loaded 20000 from vscode-userdata:/c%3A/Users/youse/AppData/Roaming/Code/User/globalStorage/dart-code.dart-code/package_cache.json
+[7:56:51 PM] [General] [Info] !! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
+
+Dart Code extension: 3.60.1
+Flutter extension: 3.60.0 (activated)
+
+App: Visual Studio Code
+Version: 1.76.0
+Platform: win
+
+Workspace type: Flutter
+Analyzer type: LSP
+Multi-root?: false
+
+Dart SDK:
+    Loc: C:\src\flutter\bin\cache\dart-sdk
+    Ver: 2.19.3
+Flutter SDK:
+    Loc: C:\src\flutter
+    Ver: 3.7.6
+
+HTTP_PROXY: undefined
+NO_PROXY: undefined
+[7:56:52 PM] [General] [Info] Analyzer:Startup timing: 843ms

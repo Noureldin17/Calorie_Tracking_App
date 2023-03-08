@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:sizer/sizer.dart';
+
 import '../../colors.dart' as colors;
 import '../DefaultText.dart';
 
@@ -15,8 +16,8 @@ class HomeProfileBanner extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(
             bottom: 10.sp, left: 16.sp, right: 16.sp, top: 10.sp),
-        height: 70.sp,
-        width: 100.w,
+        height: 78.sp,
+        width: double.infinity,
         decoration: BoxDecoration(
             border: Border.all(width: 0, color: Colors.transparent),
             borderRadius: BorderRadius.circular(22),
@@ -37,7 +38,7 @@ class HomeProfileBanner extends StatelessWidget {
                         text: 'Hey, Mohamed !',
                         // textcolor: Color.fromARGB(255, 77, 79, 100),
                         textcolor: colors.PrimaryTextColor,
-                        size: 28),
+                        size: 18.sp),
                     Padding(
                       padding: EdgeInsets.only(top: 6.sp),
                       child: IntrinsicHeight(
@@ -47,7 +48,7 @@ class HomeProfileBanner extends StatelessWidget {
                                 text: DateFormat.EEEE().format(dateFormat),
                                 // textcolor: Color.fromARGB(255, 77, 79, 100),
                                 textcolor: colors.SecondaryTextColor,
-                                size: 14),
+                                size: 10.sp),
                             VerticalDivider(
                               thickness: 1,
                               // color: Color.fromARGB(255, 77, 79, 100),
@@ -57,12 +58,12 @@ class HomeProfileBanner extends StatelessWidget {
                                 text: Jiffy(dateFormat).format("do") + ' ',
                                 // textcolor: Color.fromARGB(255, 77, 79, 100),
                                 textcolor: colors.SecondaryTextColor,
-                                size: 14),
+                                size: 10.sp),
                             DefaultText.SemiBold(
                                 text: DateFormat.yMMM().format(dateFormat),
                                 // textcolor: Color.fromARGB(255, 77, 79, 100),
                                 textcolor: colors.SecondaryTextColor,
-                                size: 14),
+                                size: 10.sp),
                           ],
                         ),
                       ),

@@ -1,6 +1,7 @@
 import 'package:fitness_app/presentation/widgets/DefaultText.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
 import '../colors.dart' as colors;
 
 class PrimaryButton extends StatelessWidget {
@@ -15,12 +16,12 @@ class PrimaryButton extends StatelessWidget {
         OnPressed();
       },
       child: DefaultText.Medium(
-          text: buttonText, textcolor: Colors.white, size: 14),
+          text: buttonText, textcolor: Colors.white, size: 12.sp),
       style: ElevatedButton.styleFrom(
         minimumSize: Size(87.4.w, 5.92.h),
         backgroundColor: colors.ButtonColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.sp),
         ),
       ),
     );

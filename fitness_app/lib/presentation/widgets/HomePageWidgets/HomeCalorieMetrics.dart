@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
-import '../../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
 
+import '../../colors.dart' as colors;
 import '../DefaultText.dart';
 
 class HomeCalorieMetrics extends StatefulWidget {
@@ -16,58 +16,63 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 16.sp, left: 16.sp, right: 16.sp),
+          padding: EdgeInsets.only(top: 14.sp, left: 16.sp, right: 16.sp),
           child: Container(
-              width: 110.sp,
-              height: 140.sp,
-              decoration: BoxDecoration(
-                  color: Color(0xFFFDEEDC),
-                  borderRadius: BorderRadius.circular(22)),
-              child: LiquidLinearProgressIndicator(
-                  borderColor: Colors.transparent,
-                  valueColor: AlwaysStoppedAnimation(Color(0xFFFFC090)),
-                  borderWidth: 0,
-                  borderRadius: 22,
-                  backgroundColor: Color(0xFFFDEEDC),
-                  direction: Axis.vertical,
-                  value: 0.7,
-                  center: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 16.sp),
-                        child: Container(
-                          width: 45.sp,
-                          height: 45.sp,
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(166, 255, 223, 175),
-                              borderRadius: BorderRadius.circular(100)),
-                          child: Center(
-                              child: Text(
-                            '🔥',
-                            style: TextStyle(fontSize: 22),
-                          )),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 10.sp),
-                        child: DefaultText.Bold(
-                            text: '2,000',
-                            textcolor: colors.PrimaryTextColor,
-                            size: 28),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 4.sp),
-                        child: DefaultText.Medium(
-                            text: 'Kcal Eaten',
-                            textcolor: colors.SecondaryTextColor,
-                            size: 16),
-                      )
-                    ],
-                  ))),
+            width: 110.sp,
+            height: 140.sp,
+            decoration: BoxDecoration(
+                color: Color(0xFFFDEEDC),
+                borderRadius: BorderRadius.circular(22)),
+            child: LiquidLinearProgressIndicator(
+              borderColor: Colors.transparent,
+              valueColor: AlwaysStoppedAnimation(Color(0xFFFFC090)),
+              borderWidth: 0,
+              borderRadius: 22,
+              backgroundColor: Color(0xFFFDEEDC),
+              direction: Axis.vertical,
+              value: 0.7,
+              center: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 16.sp),
+                    child: Container(
+                      width: 45.sp,
+                      height: 45.sp,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(166, 255, 223, 175),
+                          borderRadius: BorderRadius.circular(100)),
+                      child: Center(
+                          child: Text(
+                        '🔥',
+                        style: TextStyle(fontSize: 22.sp),
+                      )),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.sp),
+                    child: DefaultText.Bold(
+                        text: '2,000',
+                        textcolor: colors.PrimaryTextColor,
+                        size: 28.sp),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 4.sp),
+                    child: DefaultText.Medium(
+                        text: 'Kcal Eaten',
+                        textcolor: colors.SecondaryTextColor,
+                        size: 16.sp),
+                  )
+                ],
+              ),
+            ),
+          ),
         ),
         Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.only(bottom: 10.sp, top: 16.sp),
@@ -99,7 +104,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                       child: DefaultText.Bold(
                           text: '70g proteins',
                           textcolor: colors.PrimaryTextColor,
-                          size: 16),
+                          size: 12.sp),
                     )
                   ],
                 ),
@@ -135,7 +140,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                       child: DefaultText.Bold(
                           text: '120g carbs',
                           textcolor: colors.PrimaryTextColor,
-                          size: 16),
+                          size: 12.sp),
                     )
                   ],
                 ),
@@ -169,7 +174,7 @@ class _HomeCalorieMetricsState extends State<HomeCalorieMetrics> {
                     child: DefaultText.Bold(
                         text: '21g fats',
                         textcolor: colors.PrimaryTextColor,
-                        size: 16),
+                        size: 12.sp),
                   )
                 ],
               ),

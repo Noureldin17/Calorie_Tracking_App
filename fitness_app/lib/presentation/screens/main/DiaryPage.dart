@@ -1,5 +1,7 @@
 import 'package:fitness_app/presentation/widgets/DefaultText.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+
 import '../../colors.dart' as colors;
 
 class DiaryPage extends StatefulWidget {
@@ -16,7 +18,7 @@ class _DiaryPageState extends State<DiaryPage> {
       backgroundColor: colors.BackgroundColor,
       body: Center(
           child: DefaultText.Medium(
-              text: 'Diary Page', textcolor: Colors.black, size: 30)),
+              text: 'Diary Page', textcolor: Colors.black, size: 30.sp)),
     );
   }
 }
