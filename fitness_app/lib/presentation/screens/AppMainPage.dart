@@ -8,8 +8,6 @@ import '../colors.dart' as colors;
 // ignore: must_be_immutable
 class AppMainPage extends StatefulWidget {
   AppMainPage({super.key});
-  int currentIndex = 0;
-
   @override
   State<AppMainPage> createState() => _AppMainPageState();
 }
@@ -19,6 +17,7 @@ class _AppMainPageState extends State<AppMainPage> {
   @override
   void initState() {
     super.initState();
+    MainPageCubit.get(context).initPages();
     mainPages = MainPageCubit.get(context).Screens;
   }
 

@@ -1,7 +1,7 @@
+import 'package:fitness_app/business_logic/cubit/main_page_cubit.dart';
 import 'package:flutter/material.dart';
 import '../../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
-
 import '../DefaultText.dart';
 
 class HomeDiaryCard extends StatelessWidget {
@@ -38,7 +38,9 @@ class HomeDiaryCard extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(top: 6.sp, left: 8.sp),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      MainPageCubit.get(context).changePage(2);
+                    },
                     child: DefaultText.Medium(
                         text: 'Go to diary',
                         textcolor: Colors.white,

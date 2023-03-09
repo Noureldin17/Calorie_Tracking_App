@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import '../../colors.dart' as colors;
 import 'package:google_fonts/google_fonts.dart';
@@ -20,15 +19,15 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(16.sp, 20.sp, 16.sp, 0),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(22),
+      padding: EdgeInsetsDirectional.fromSTEB(0.sp, 0.sp, 0.sp, 0.sp),
+      child: ClipPath(
+        // clipper: OvalBottomBorderClipper(),
         child: Container(
           height: 205.sp,
           width: 100.w,
           decoration: BoxDecoration(
               color: colors.CardBackgroundColor,
-              borderRadius: BorderRadius.circular(22)),
+              borderRadius: BorderRadius.circular(0)),
           child: Stack(
             children: [
               ClipPath(
@@ -57,7 +56,7 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                           child: Column(
                             children: [
                               DefaultText.Bold(
-                                  text: '1456 kcal',
+                                  text: '2000 kcal',
                                   textcolor: colors.PrimaryTextColor,
                                   size: 14.sp),
                               DefaultText.SemiBold(
@@ -68,20 +67,16 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                           ),
                         ),
                         CircularPercentIndicator(
+                            animationDuration: 1500,
                             animation: true,
                             radius: 90.sp,
                             backgroundWidth: 16,
                             lineWidth: 12,
                             circularStrokeCap: CircularStrokeCap.round,
-                            // backgroundColor: Color.fromARGB(255, 229, 231, 235),
                             backgroundColor: Color(0xFF95BDFF),
-                            // progressColor: Color(0xFFE14D2A),
-                            // progressColor: Color.fromARGB(255, 20, 98, 135),
                             progressColor: colors.PrimaryColor,
-                            // progressColor: colors.PrimaryColor,
                             percent: 0.5,
                             center: DottedBorder(
-                              // color: Color(0xFFE14D2A),
                               color: Color.fromARGB(255, 20, 98, 135),
                               strokeWidth: 3,
                               dashPattern: [1, 12],
@@ -91,7 +86,7 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                   textAlign: TextAlign.center,
                                   text: TextSpan(children: [
                                     TextSpan(
-                                        text: "2000",
+                                        text: "1456",
                                         style: GoogleFonts.roboto(
                                             textStyle: TextStyle(
                                                 color: colors.PrimaryTextColor,
@@ -126,7 +121,7 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          12.sp, 12.sp, 12.sp, 0),
+                          12.sp, 12.sp, 12.sp, 0.sp),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -155,6 +150,7 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                     size: 10.sp),
                               ),
                               LinearPercentIndicator(
+                                animationDuration: 1500,
                                 lineHeight: 6.sp,
                                 width: 60.sp,
                                 animation: true,
@@ -181,12 +177,10 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                 decoration: BoxDecoration(
                                     border: Border.all(
                                         color: Colors.white, width: 1),
-                                    // color: Color(0xFF9ED5C5),
                                     color: Color(0xFFF4E185),
                                     borderRadius: BorderRadius.circular(100)),
                                 child: Image.asset(
                                   'assets/icons/bread.png',
-                                  // color: Color(0xFF68B984),
                                   color: Color(0XFFE7B10A),
                                 ),
                               ),
@@ -199,15 +193,14 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                     size: 10.sp),
                               ),
                               LinearPercentIndicator(
+                                animationDuration: 1500,
                                 lineHeight: 6.sp,
                                 width: 60.sp,
                                 animation: true,
                                 linearStrokeCap: LinearStrokeCap.roundAll,
                                 percent: 0.7,
-                                // progressColor: Color(0xFF68B984),
                                 progressColor: Color(0XFFE7B10A),
                                 backgroundColor: Color(0xFFF4E185),
-                                // backgroundColor: Color(0xFF9ED5C5),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: 4.sp),
@@ -228,11 +221,9 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                     border: Border.all(
                                         color: Colors.white, width: 1),
                                     color: Color(0xFF95BDFF),
-                                    // color: Color(0xFFF4E185),
                                     borderRadius: BorderRadius.circular(100)),
                                 child: Image.asset(
                                   'assets/icons/fat.png',
-                                  // color: Color(0XFFE7B10A),
                                   color: colors.PrimaryColor,
                                 ),
                               ),
@@ -245,14 +236,13 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                     size: 10.sp),
                               ),
                               LinearPercentIndicator(
+                                animationDuration: 1500,
                                 lineHeight: 6.sp,
                                 width: 60.sp,
                                 animation: true,
                                 linearStrokeCap: LinearStrokeCap.roundAll,
                                 percent: 0.7,
-                                // progressColor: Color(0XFFE7B10A),
                                 progressColor: colors.PrimaryColor,
-                                // backgroundColor: Color(0xFFF4E185),
                                 backgroundColor: Color(0xFF95BDFF),
                               ),
                               Padding(

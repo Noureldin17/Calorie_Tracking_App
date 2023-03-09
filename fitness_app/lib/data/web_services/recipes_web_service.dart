@@ -14,7 +14,8 @@ class RecipesWebService {
     dio = Dio(options);
   }
 
-  Future<List<dynamic>> getRecipes(String diet) async {
+  Future<List<dynamic>> getRecipes(
+      List<String> diet, List<String> health) async {
     try {
       Response response = await dio.get(
         'recipes/v2',

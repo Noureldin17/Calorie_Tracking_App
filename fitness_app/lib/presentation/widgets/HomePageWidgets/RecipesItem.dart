@@ -1,22 +1,19 @@
 import 'package:fitness_app/presentation/widgets/DefaultText.dart';
 import 'package:flutter/material.dart';
+import '../../../data/models/recipe_model.dart';
+import '../../../constants/pages.dart' as pages;
 import '../../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
 
 class RecipesItem extends StatefulWidget {
-  const RecipesItem(
-      {super.key,
-      required this.RecipeName,
-      required this.Ingredients,
-      required this.Calories,
-      required this.RecipeImage,
-      required this.DietLabel});
-  final String RecipeImage;
-  final String RecipeName;
-  final String DietLabel;
-  final List<dynamic> Ingredients;
-  final double Calories;
+  const RecipesItem({
+    super.key,
+    required this.recipe,
+    required this.category,
+  });
 
+  final Recipe recipe;
+  final String category;
   @override
   State<RecipesItem> createState() => _RecipesItemState();
 }
@@ -27,7 +24,10 @@ class _RecipesItemState extends State<RecipesItem> {
     return Padding(
       padding: EdgeInsets.only(left: 10.sp),
       child: InkWell(
-        onTap: (() {}),
+        onTap: (() {
+          Navigator.pushNamed(context, pages.Recipe_Description_Page,
+              arguments: widget.recipe);
+        }),
         child: Container(
           width: 125.sp,
           height: 145.sp,
@@ -45,28 +45,18 @@ class _RecipesItemState extends State<RecipesItem> {
                 child: Stack(
                   children: [
                     Image.network(
-                      widget.RecipeImage,
+                      widget.recipe.ImageUrl!,
                       height: 80.sp,
                       width: 125.sp,
                       fit: BoxFit.fitWidth,
                     ),
-                    // Container(
-                    //   constraints: BoxConstraints(minHeight: 50, minWidth: 160),
-                    //   decoration: BoxDecoration(
-                    //       color: Color.fromARGB(150, 215, 204, 204),
-                    //       borderRadius: BorderRadius.circular(22)),
-                    //   child: DefaultText.SemiBold(
-                    //       text: widget.RecipeName,
-                    //       textcolor: Colors.white,
-                    //       size: 16.sp),
-                    // )
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.all(4.sp),
                 child: DefaultText.Overflow(
-                    text: widget.RecipeName,
+                    text: widget.recipe.Label!,
                     textcolor: colors.PrimaryTextColor,
                     size: 12.sp),
               ),
@@ -76,7 +66,7 @@ class _RecipesItemState extends State<RecipesItem> {
                 child: Row(
                   children: [
                     DefaultText.Overflow(
-                        text: widget.DietLabel,
+                        text: widget.category,
                         textcolor: colors.SecondaryTextColor,
                         size: 10.sp),
                     Spacer(),
@@ -86,7 +76,12 @@ class _RecipesItemState extends State<RecipesItem> {
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(color: colors.SecondaryTextColor)),
                       child: DefaultText.Overflow(
-                          text: widget.Calories.floor().toString() + 'Kcal',
+                          text: ((widget.recipe.Calories! /
+                                          widget.recipe.Weight!) *
+                                      100)
+                                  .floor()
+                                  .toString() +
+                              'Kcal',
                           textcolor: colors.SecondaryTextColor,
                           size: 9.sp),
                     ),

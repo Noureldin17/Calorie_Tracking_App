@@ -30,7 +30,7 @@ class _MealCardState extends State<MealCard> {
         child: Container(
           decoration: BoxDecoration(
               // color: Color.fromARGB(179, 206, 126, 46),
-              color: colors.PrimaryTextColor,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(22)),
           child: Column(
             children: [
@@ -76,7 +76,7 @@ class _MealCardState extends State<MealCard> {
                                   Padding(
                                     padding: EdgeInsets.only(top: 6.sp),
                                     child: DefaultText.SemiBold(
-                                        text: 'Total Calories',
+                                        text: 'Calories',
                                         textcolor: colors.PrimaryTextColor,
                                         size: 14.sp),
                                   ),
@@ -107,13 +107,24 @@ class _MealCardState extends State<MealCard> {
                   ),
                 ),
               ),
-              Center(
-                child: TextButton(
-                    onPressed: () {},
-                    child: DefaultText.Bold(
-                        text: 'Add Food',
-                        textcolor: Colors.white,
-                        size: 12.sp)),
+              Padding(
+                padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          fixedSize: Size(100.w, 25.sp),
+                          shape: RoundedRectangleBorder(
+                              side: BorderSide(color: colors.PrimaryTextColor),
+                              borderRadius: BorderRadius.circular(22)),
+                          backgroundColor: Colors.white),
+                      onPressed: () {},
+                      child: DefaultText.Bold(
+                          text: 'Add Food',
+                          // textcolor: Colors.white,
+                          textcolor: colors.PrimaryTextColor,
+                          size: 12.sp)),
+                ),
               )
             ],
           ),

@@ -9,8 +9,8 @@ class RecipesLoadError extends RecipesState {}
 
 class RecipesLoading extends RecipesState {}
 
-class RecipesLoaded extends RecipesState {
-  final List<Recipe> recipes;
-  final List<Recipe> highproteinrecipes;
-  RecipesLoaded(this.recipes, this.highproteinrecipes);
-}
+class HPRecipesLoading extends RecipesState {}
+
+class RecipesLoaded extends RecipesState {}
+
+class HPRecipesLoaded extends RecipesState {}

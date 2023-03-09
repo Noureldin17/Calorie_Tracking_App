@@ -2,8 +2,7 @@ import 'package:fitness_app/business_logic/cubit/recipes_cubit.dart';
 import 'package:fitness_app/presentation/widgets/DefaultText.dart';
 import 'package:fitness_app/presentation/widgets/HomePageWidgets/HomePageDiaryCard.dart';
 import 'package:fitness_app/presentation/widgets/HomePageWidgets/HomeProfileBanner.dart';
-import 'package:fitness_app/presentation/widgets/HomePageWidgets/RecipesItem.dart';
-import 'package:fitness_app/presentation/widgets/RecipeHeader.dart';
+import 'package:fitness_app/presentation/widgets/RecipesScrollView.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
@@ -53,102 +52,45 @@ class _HomePageState extends State<HomePage> {
                     ),
                     BlocBuilder<RecipesCubit, RecipesState>(
                       builder: (context, state) {
-                        if (state is RecipesLoaded) {
-                          recipes = state.recipes;
+                        if (state is RecipesLoaded ||
+                            state is HPRecipesLoaded) {
+                          recipes = cubit.recipes;
+                          HPrecipes = cubit.highproteinrecipes;
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              RecipeHeader(
-                                  HeaderText: 'Balanced', OnViewMore: () {}),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Padding(
-                                  padding: EdgeInsets.only(
-                                      top: 10.sp, left: 6.sp, right: 16.sp),
-                                  child: Row(
-                                    children: [
-                                      ...recipes.map((recipe) => RecipesItem(
-                                          Ingredients: recipe.Ingredients!,
-                                          Calories: (recipe.Calories! /
-                                                  recipe.Weight!) *
-                                              100,
-                                          RecipeName: recipe.Label!,
-                                          RecipeImage: recipe.ImageUrl!,
-                                          DietLabel: recipe.DietLabels![0]))
-                                    ],
-                                  ),
-                                ),
-                              ),
+                              RecipesScrollView(
+                                  recipes: recipes,
+                                  recipesType: 'Balanced',
+                                  OnViewMore: () {}),
+                              RecipesScrollView(
+                                  recipes: HPrecipes,
+                                  recipesType: 'High-Protein',
+                                  OnViewMore: () {}),
                             ],
                           );
-                        } else if (state is RecipesLoading) {
+                        } else if (state is RecipesLoading ||
+                            state is HPRecipesLoading) {
                           return Padding(
                             padding: EdgeInsets.only(top: 50.sp),
-                            child: Center(
-                                child: CircularProgressIndicator(
-                              color: colors.PrimaryTextColor,
-                            )
-                                // Image.asset(
-                                //   'assets/Spinner.gif',
-                                //   height: 70.sp,
-                                //   width: 70.sp,
-                                // ),
-                                ),
+                            child: Column(
+                              children: [
+                                Center(
+                                    child: CircularProgressIndicator(
+                                  color: colors.PrimaryTextColor,
+                                )),
+                                Padding(padding: EdgeInsets.all(40.sp)),
+                                Center(
+                                    child: CircularProgressIndicator(
+                                  color: colors.PrimaryTextColor,
+                                )),
+                              ],
+                            ),
                           );
                         } else if (state is RecipesLoadError) {
                           return Text('ERROR LOADING DATA...');
                         } else {
                           return Text('data');
-                        }
-                      },
-                    ),
-                    BlocBuilder<RecipesCubit, RecipesState>(
-                      builder: (context, state) {
-                        if (state is RecipesLoaded) {
-                          HPrecipes = state.highproteinrecipes;
-                          return Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              RecipeHeader(
-                                  HeaderText: 'High-Protein',
-                                  OnViewMore: () {}),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Padding(
-                                  padding: EdgeInsets.only(
-                                      top: 10.sp, left: 6.sp, right: 16.sp),
-                                  child: Row(
-                                    children: [
-                                      ...HPrecipes.map((recipe) => RecipesItem(
-                                          Ingredients: recipe.Ingredients!,
-                                          Calories: (recipe.Calories! /
-                                                  recipe.Weight!) *
-                                              100,
-                                          RecipeName: recipe.Label!,
-                                          RecipeImage: recipe.ImageUrl!,
-                                          DietLabel: recipe.DietLabels![0])),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          );
-                        } else if (state is RecipesLoading) {
-                          return Padding(
-                            padding: EdgeInsets.only(top: 100.sp),
-                            child: Center(
-                                child: CircularProgressIndicator(
-                              color: colors.PrimaryTextColor,
-                            )),
-                          );
-                        } else {
-                          return Center(
-                            child: Image.asset(
-                              'assets/illustrations/404-error.png',
-                              height: 200.sp,
-                              width: 200.sp,
-                            ),
-                          );
                         }
                       },
                     ),

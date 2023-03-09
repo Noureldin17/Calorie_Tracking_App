@@ -6,13 +6,39 @@ class RecipesRepository {
 
   RecipesRepository(this.recipesWebService);
 
-  Future<List<Recipe>> getRecipes(String diet) async {
-    final recipes = await recipesWebService.getRecipes(diet);
+  Future<List<Recipe>> getRecipes(
+      List<String> diet, List<String> health) async {
+    final recipes = await recipesWebService.getRecipes(diet, health);
     return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
   }
 
-  Future<List<Recipe>> getHighProteinRecipes(String diet) async {
-    final recipes = await recipesWebService.getRecipes(diet);
+  Future<List<Recipe>> getHighProteinRecipes(
+      List<String> diet, List<String> health) async {
+    final recipes = await recipesWebService.getRecipes(diet, health);
+    return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
+  }
+
+  Future<List<Recipe>> getLowCarbRecipes(
+      List<String> diet, List<String> health) async {
+    final recipes = await recipesWebService.getRecipes(diet, health);
+    return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
+  }
+
+  Future<List<Recipe>> getLowFatRecipes(
+      List<String> diet, List<String> health) async {
+    final recipes = await recipesWebService.getRecipes(diet, health);
+    return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
+  }
+
+  Future<List<Recipe>> getGlutenFreeRecipes(
+      List<String> diet, List<String> health) async {
+    final recipes = await recipesWebService.getRecipes(diet, health);
+    return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
+  }
+
+  Future<List<Recipe>> getKetoRecipes(
+      List<String> diet, List<String> health) async {
+    final recipes = await recipesWebService.getRecipes(diet, health);
     return recipes.map((recipe) => Recipe.fromJson(recipe)).toList();
   }
 }
