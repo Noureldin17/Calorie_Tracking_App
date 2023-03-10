@@ -1,5 +1,5 @@
 import 'package:camera/camera.dart';
-import 'package:fitness_app/presentation/widgets/CameraPageWidgets.dart/CameraLoadingCard.dart';
+import 'package:fitness_app/presentation/widgets/CameraPageWidgets/CameraLoadingCard.dart';
 import 'package:flutter/material.dart';
 import '../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
@@ -14,6 +14,12 @@ class CameraPage extends StatefulWidget {
 class _CameraPageState extends State<CameraPage> {
   late CameraController cameraController;
   XFile? pictureFile;
+
+  @override
+  void dispose() {
+    cameraController.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {

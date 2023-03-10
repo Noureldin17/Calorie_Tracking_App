@@ -1,5 +1,7 @@
+import 'package:fitness_app/presentation/widgets/DiaryPageWidgets/FoodEntryItem.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../colors.dart' as colors;
 import 'package:sizer/sizer.dart';
 
@@ -21,6 +23,7 @@ class MealCard extends StatefulWidget {
 }
 
 class _MealCardState extends State<MealCard> {
+  var list = [1, 2, 3, 4, 5];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -107,6 +110,8 @@ class _MealCardState extends State<MealCard> {
                   ),
                 ),
               ),
+              Divider(color: Colors.grey),
+              ...list.map((e) => FoodEntryItem()),
               Padding(
                 padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
                 child: Align(
@@ -125,7 +130,7 @@ class _MealCardState extends State<MealCard> {
                           textcolor: colors.PrimaryTextColor,
                           size: 12.sp)),
                 ),
-              )
+              ),
             ],
           ),
         ),

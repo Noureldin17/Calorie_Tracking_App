@@ -37,6 +37,13 @@ class DefaultText extends StatelessWidget {
       required this.size})
       : fontWeight = FontWeight.w600,
         MaxLines = 2;
+  const DefaultText.OneLineOverflow(
+      {super.key,
+      required this.text,
+      required this.textcolor,
+      required this.size})
+      : fontWeight = FontWeight.w600,
+        MaxLines = 1;
 
   final String text;
   final Color textcolor;

@@ -2,6 +2,7 @@ class Recipe {
   String? Label;
   String? ImageUrl;
   List<dynamic>? DietLabels;
+  List<dynamic>? HealthLabels;
   double? Calories;
   double? Weight;
   List<dynamic>? Ingredients;
@@ -13,6 +14,7 @@ class Recipe {
     Label = json['recipe']['label'];
     ImageUrl = json['recipe']['images']['LARGE']["url"];
     DietLabels = json['recipe']['dietLabels'];
+    HealthLabels = json['recipe']['healthLabels'];
     Calories = json['recipe']['calories'];
     Weight = json['recipe']['totalWeight'];
     Ingredients = json['recipe']['ingredientLines'];
