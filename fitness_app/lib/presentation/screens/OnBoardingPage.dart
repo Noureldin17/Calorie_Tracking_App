@@ -30,7 +30,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     Container(
                       margin: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       alignment: AlignmentDirectional.topCenter,
-                      height: 500.sp,
+                      height: 85.h,
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,

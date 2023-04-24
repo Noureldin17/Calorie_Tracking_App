@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.lite.examples.detection.env;
+package com.example.fitness_app.env;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -84,7 +84,7 @@ public class BorderedText {
     float width = exteriorPaint.measureText(text);
     float textSize = exteriorPaint.getTextSize();
     Paint paint = new Paint(bgPaint);
-    paint.setStyle(Paint.Style.FILL);
+    paint.setStyle(Style.FILL);
     paint.setAlpha(160);
     canvas.drawRect(posX, (posY + (int) (textSize)), (posX + (int) (width)), posY, paint);
 

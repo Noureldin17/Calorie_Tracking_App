@@ -6,7 +6,8 @@ import 'package:sizer/sizer.dart';
 import '../DefaultText.dart';
 
 class FoodEntryItem extends StatefulWidget {
-  const FoodEntryItem({super.key});
+  const FoodEntryItem({super.key, required this.MealName});
+  final String MealName;
 
   @override
   State<FoodEntryItem> createState() => _FoodEntryItemState();
@@ -25,7 +26,7 @@ class _FoodEntryItemState extends State<FoodEntryItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 DefaultText.OneLineOverflow(
-                    text: 'Meal name',
+                    text: widget.MealName,
                     textcolor: colors.PrimaryTextColor,
                     size: 12.sp),
                 Padding(padding: EdgeInsets.all(2.sp)),

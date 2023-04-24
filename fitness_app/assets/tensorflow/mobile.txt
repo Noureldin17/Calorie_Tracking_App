@@ -1,0 +1,15 @@
+Apple
+Bagel
+Banana
+Bread
+Doughnut
+French-fries
+Grape
+Hamburger
+Hot-dog
+Muffin
+Orange
+Pancake
+Pizza
+Sandwich
+Waffle

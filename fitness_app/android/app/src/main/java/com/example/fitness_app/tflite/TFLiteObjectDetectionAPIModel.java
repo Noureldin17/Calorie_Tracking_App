@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.lite.examples.detection.tflite;
+package com.example.fitness_app.tflite;
 
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
@@ -36,7 +36,7 @@ import java.util.Map;
 import java.util.Vector;
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.gpu.GpuDelegate;
-import org.tensorflow.lite.examples.detection.env.Logger;
+import com.example.fitness_app.env.Logger;
 /**
  * Wrapper for frozen detection models trained using the Tensorflow Object Detection API:
  * - https://github.com/tensorflow/models/tree/master/research/object_detection

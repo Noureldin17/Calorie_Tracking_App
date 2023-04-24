@@ -13,11 +13,13 @@ class MealCard extends StatefulWidget {
     required this.ImageAsset,
     required this.MealTitle,
     required this.TotalCalories,
+    required this.FoodItems,
   });
 
   final String MealTitle;
   final String ImageAsset;
   final int TotalCalories;
+  final List<String> FoodItems;
   @override
   State<MealCard> createState() => _MealCardState();
 }
@@ -111,7 +113,9 @@ class _MealCardState extends State<MealCard> {
                 ),
               ),
               Divider(color: Colors.grey),
-              ...list.map((e) => FoodEntryItem()),
+              ...widget.FoodItems.map((e) => FoodEntryItem(
+                    MealName: e,
+                  )),
               Padding(
                 padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
                 child: Align(

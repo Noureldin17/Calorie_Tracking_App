@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.lite.examples.detection.tracking;
+package com.example.fitness_app.tracking;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -32,10 +32,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import org.tensorflow.lite.examples.detection.env.BorderedText;
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.env.Logger;
-import org.tensorflow.lite.examples.detection.tflite.Classifier.Recognition;
+import com.example.fitness_app.env.BorderedText;
+import com.example.fitness_app.env.ImageUtils;
+import com.example.fitness_app.env.Logger;
+import com.example.fitness_app.tflite.Classifier.Recognition;
 
 /**
  * A tracker that handles non-max suppression and matches existing objects to new detections.
@@ -45,15 +45,16 @@ public class MultiBoxTracker {
     private static final float MIN_SIZE = 16.0f;
     private static final int[] COLORS = {
             Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a"),
-            Color.parseColor("#ff8b1a")
+            Color.parseColor("#77037B"),
+            Color.parseColor("#FFD93D"),
+            Color.parseColor("#19A7CE"),
+            Color.parseColor("#03C988"),
+            Color.parseColor("#DC0000"),
+            Color.parseColor("#3B9AE1"),
+            Color.parseColor("#1EAE98"),
+            Color.parseColor("#3F3697"),
+            Color.parseColor("#28527A"),
+            Color.parseColor("#3FC5F0"),
     };
     final List<Pair<Float, RectF>> screenRects = new LinkedList<Pair<Float, RectF>>();
     private final Logger logger = new Logger();
@@ -75,7 +76,7 @@ public class MultiBoxTracker {
         boxPaint.setColor(Color.RED);
         boxPaint.setStyle(Style.STROKE);
         boxPaint.setStrokeWidth(10.0f);
-        boxPaint.setStrokeCap(Cap.ROUND);
+        boxPaint.setStrokeCap(Cap.BUTT);
         boxPaint.setStrokeJoin(Join.ROUND);
         boxPaint.setStrokeMiter(100);
 
@@ -136,7 +137,7 @@ public class MultiBoxTracker {
             } else {
                 final String labelString =
                         !TextUtils.isEmpty(recognition.title)
-                                ? String.format("%s", recognition.title)
+                                ? String.format("%s %.2f%%", recognition.title, (100 * recognition.detectionConfidence))
                                 : String.format("%.2f", (100 * recognition.detectionConfidence));
                 borderedText.drawText(
                         canvas, trackedPos.left + cornerSize, trackedPos.top, labelString, boxPaint);

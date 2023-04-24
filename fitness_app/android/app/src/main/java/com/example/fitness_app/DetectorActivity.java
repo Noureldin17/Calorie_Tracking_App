@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package org.tensorflow.lite.examples.detection;
+package com.example.fitness_app;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -37,18 +38,19 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Vector;
 
-import org.tensorflow.lite.examples.detection.customview.OverlayView;
-import org.tensorflow.lite.examples.detection.customview.OverlayView.DrawCallback;
-import org.tensorflow.lite.examples.detection.env.BorderedText;
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.env.Logger;
-import org.tensorflow.lite.examples.detection.tflite.Classifier;
-import org.tensorflow.lite.examples.detection.tflite.TFLiteObjectDetectionAPIModel;
-import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
+import com.example.fitness_app.customview.OverlayView;
+import com.example.fitness_app.customview.OverlayView.DrawCallback;
+import com.example.fitness_app.env.BorderedText;
+import com.example.fitness_app.env.ImageUtils;
+import com.example.fitness_app.env.Logger;
+import com.example.fitness_app.tflite.Classifier;
+import com.example.fitness_app.tflite.TFLiteObjectDetectionAPIModel;
+import com.example.fitness_app.tracking.MultiBoxTracker;
 
 /**
  * An activity that uses a TensorFlowMultiBoxDetector and ObjectTracker to detect and then track
@@ -89,6 +91,30 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
     private MultiBoxTracker tracker;
 
     private BorderedText borderedText;
+
+
+
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        Intent main = new Intent(getApplicationContext(), MainActivity.class);
+//        List<String> result = new ArrayList<>();
+//        result.add("NONE");
+//        main.putExtra("res", (ArrayList<String>) result);
+//        setResult(1, main);
+//        finish();
+//    }
+
+//    @Override
+//    public synchronized void onResume() {
+//        super.onResume();
+//        Intent main = new Intent(getApplicationContext(), MainActivity.class);
+//        List<String> result = new ArrayList<>();
+//        main.putExtra("res", (ArrayList<String>) result);
+//        setResult(1, main);
+//        finish();
+//    }
+
 
     @Override
     public void onPreviewSizeChosen(final Size size, final int rotation) {
@@ -220,6 +246,8 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                         capture.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                List<String> result_list = new ArrayList<>();
+                                String food = "NONE";
                                 for (final Classifier.Recognition result : results) {
                                     final RectF location = result.getLocation();
                                     if (location != null && result.getConfidence() >= finalMinimumConfidence) {
@@ -227,9 +255,14 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                                         cropToFrameTransform.mapRect(location);
                                         result.setLocation(location);
                                         mappedRecognitions.add(result);
-                                        MainActivity.getInstance().addFood(String.format(result.getTitle()));
+                                        result_list.add(result.getTitle());
+                                        food = result.getTitle();
+
                                     }
                                 }
+                                Intent main = new Intent(getApplicationContext(), MainActivity.class);
+                                main.putExtra("res", (ArrayList<String>) result_list);
+                                setResult(1, main);
                                 finish();
                             }
                         });
