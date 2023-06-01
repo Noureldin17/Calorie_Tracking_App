@@ -9,7 +9,17 @@ import 'package:sizer/sizer.dart';
 import '../DefaultText.dart';
 
 class CalorieMetricsCard extends StatefulWidget {
-  const CalorieMetricsCard({super.key});
+  const CalorieMetricsCard({
+    super.key,
+    required this.calories_consumed,
+    required this.carbs_consumed,
+    required this.fats_consumed,
+    required this.protein_consumed,
+  });
+  final num calories_consumed;
+  final num carbs_consumed;
+  final num protein_consumed;
+  final num fats_consumed;
 
   @override
   State<CalorieMetricsCard> createState() => _CalorieMetricsCardState();
@@ -75,7 +85,9 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                             circularStrokeCap: CircularStrokeCap.round,
                             backgroundColor: Color(0xFF95BDFF),
                             progressColor: colors.PrimaryColor,
-                            percent: 0.5,
+                            percent: widget.calories_consumed.round() / 2000 > 1
+                                ? 1
+                                : widget.calories_consumed.round() / 2000,
                             center: DottedBorder(
                               color: Color.fromARGB(255, 20, 98, 135),
                               strokeWidth: 3,
@@ -86,7 +98,8 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                   textAlign: TextAlign.center,
                                   text: TextSpan(children: [
                                     TextSpan(
-                                        text: "1456",
+                                        text:
+                                            "${widget.calories_consumed.round()}",
                                         style: GoogleFonts.roboto(
                                             textStyle: TextStyle(
                                                 color: colors.PrimaryTextColor,
@@ -107,7 +120,8 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                           child: Column(
                             children: [
                               DefaultText.Bold(
-                                  text: '544 kcal',
+                                  text:
+                                      '${2000 - widget.calories_consumed.round()} kcal',
                                   textcolor: colors.PrimaryTextColor,
                                   size: 14.sp),
                               DefaultText.SemiBold(
@@ -155,14 +169,18 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                 width: 60.sp,
                                 animation: true,
                                 linearStrokeCap: LinearStrokeCap.roundAll,
-                                percent: 0.7,
+                                percent:
+                                    widget.protein_consumed.round() / 150 > 1
+                                        ? 1
+                                        : widget.protein_consumed.round() / 150,
                                 progressColor: Color(0xFFDD5353),
                                 backgroundColor: Color(0xFFF7A4A4),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: 4.sp),
                                 child: DefaultText.SemiBold(
-                                    text: '12g left',
+                                    text:
+                                        '${150 - widget.protein_consumed.round()}g left',
                                     textcolor: colors.SecondaryTextColor,
                                     size: 10.sp),
                               ),
@@ -198,14 +216,17 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                 width: 60.sp,
                                 animation: true,
                                 linearStrokeCap: LinearStrokeCap.roundAll,
-                                percent: 0.7,
+                                percent: widget.carbs_consumed.round() / 200 > 1
+                                    ? 1
+                                    : widget.carbs_consumed.round() / 200,
                                 progressColor: Color(0XFFE7B10A),
                                 backgroundColor: Color(0xFFF4E185),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: 4.sp),
                                 child: DefaultText.SemiBold(
-                                    text: '12g left',
+                                    text:
+                                        '${200 - widget.carbs_consumed.round()}g left',
                                     textcolor: colors.SecondaryTextColor,
                                     size: 10.sp),
                               ),
@@ -241,14 +262,17 @@ class _CalorieMetricsCardState extends State<CalorieMetricsCard> {
                                 width: 60.sp,
                                 animation: true,
                                 linearStrokeCap: LinearStrokeCap.roundAll,
-                                percent: 0.7,
+                                percent: widget.fats_consumed.round() / 66 > 1
+                                    ? 1
+                                    : widget.fats_consumed.round() / 66,
                                 progressColor: colors.PrimaryColor,
                                 backgroundColor: Color(0xFF95BDFF),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: 4.sp),
                                 child: DefaultText.SemiBold(
-                                    text: '12g left',
+                                    text:
+                                        '${66 - widget.protein_consumed.round()}g left',
                                     textcolor: colors.SecondaryTextColor,
                                     size: 10.sp),
                               ),

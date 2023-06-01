@@ -8,7 +8,7 @@ class SaveMealModalSheet extends StatefulWidget {
   const SaveMealModalSheet(
       {super.key, required this.OnSavePressed, required this.ItemsList});
   final Function OnSavePressed;
-  final List<String> ItemsList;
+  final List<Map> ItemsList;
   @override
   State<SaveMealModalSheet> createState() => _SaveMealModalSheetState();
 }

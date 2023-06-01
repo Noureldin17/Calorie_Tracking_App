@@ -6,9 +6,10 @@ import 'package:sizer/sizer.dart';
 import '../DefaultText.dart';
 
 class FoodEntryItem extends StatefulWidget {
-  const FoodEntryItem({super.key, required this.MealName});
+  const FoodEntryItem(
+      {super.key, required this.MealName, required this.calories});
   final String MealName;
-
+  final num calories;
   @override
   State<FoodEntryItem> createState() => _FoodEntryItemState();
 }
@@ -31,7 +32,7 @@ class _FoodEntryItemState extends State<FoodEntryItem> {
                     size: 12.sp),
                 Padding(padding: EdgeInsets.all(2.sp)),
                 DefaultText.OneLineOverflow(
-                    text: '320 Kcal',
+                    text: '${widget.calories.round()} Kcal',
                     textcolor: colors.SecondaryTextColor,
                     size: 10.sp),
               ],

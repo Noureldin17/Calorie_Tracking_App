@@ -151,9 +151,9 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
         previewHeight = size.getHeight();
 
         sensorOrientation = rotation - getScreenOrientation();
-        LOGGER.i("Camera orientation relative to screen canvas: %d", sensorOrientation);
+//        LOGGER.i("Camera orientation relative to screen canvas: %d", sensorOrientation);
 
-        LOGGER.i("Initializing at size %dx%d", previewWidth, previewHeight);
+//        LOGGER.i("Initializing at size %dx%d", previewWidth, previewHeight);
         rgbFrameBitmap = Bitmap.createBitmap(previewWidth, previewHeight, Config.ARGB_8888);
         croppedBitmap = Bitmap.createBitmap(cropSize, cropSize, Config.ARGB_8888);
 
@@ -190,7 +190,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
             return;
         }
         computingDetection = true;
-        LOGGER.i("Preparing image " + currTimestamp + " for detection in bg thread.");
+//        LOGGER.i("Preparing image " + currTimestamp + " for detection in bg thread.");
 
         rgbFrameBitmap.setPixels(getRgbBytes(), 0, previewWidth, 0, 0, previewWidth, previewHeight);
 
@@ -207,7 +207,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                 new Runnable() {
                     @Override
                     public void run() {
-                        LOGGER.i("Running detection on image " + currTimestamp);
+//                        LOGGER.i("Running detection on image " + currTimestamp);
                         final long startTime = SystemClock.uptimeMillis();
                         final List<Classifier.Recognition> results = detector.recognizeImage(croppedBitmap);
                         lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
@@ -243,10 +243,13 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
                         FloatingActionButton capture = findViewById(R.id.capture);
                         float finalMinimumConfidence = minimumConfidence;
+
                         capture.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 List<String> result_list = new ArrayList<>();
+                                ArrayList<Integer> result_len = new ArrayList<>();
+                                ArrayList<Integer> result_wid = new ArrayList<>();
                                 String food = "NONE";
                                 for (final Classifier.Recognition result : results) {
                                     final RectF location = result.getLocation();
@@ -256,12 +259,15 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                                         result.setLocation(location);
                                         mappedRecognitions.add(result);
                                         result_list.add(result.getTitle());
+                                        result_len.add(Math.round(location.height()));
+                                        result_wid.add(Math.round(location.width()));
                                         food = result.getTitle();
-
                                     }
                                 }
                                 Intent main = new Intent(getApplicationContext(), MainActivity.class);
                                 main.putExtra("res", (ArrayList<String>) result_list);
+                                main.putExtra("len", result_len);
+                                main.putExtra("wid", result_wid);
                                 setResult(1, main);
                                 finish();
                             }

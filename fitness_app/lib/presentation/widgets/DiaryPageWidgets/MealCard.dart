@@ -8,24 +8,21 @@ import 'package:sizer/sizer.dart';
 import '../DefaultText.dart';
 
 class MealCard extends StatefulWidget {
-  const MealCard({
-    super.key,
-    required this.ImageAsset,
-    required this.MealTitle,
-    required this.TotalCalories,
-    required this.FoodItems,
-  });
-
+  const MealCard(
+      {super.key,
+      required this.ImageAsset,
+      required this.MealItems,
+      required this.MealTitle,
+      required this.OnAddFood});
+  final Function OnAddFood;
   final String MealTitle;
   final String ImageAsset;
-  final int TotalCalories;
-  final List<String> FoodItems;
+  final List<Map> MealItems;
   @override
   State<MealCard> createState() => _MealCardState();
 }
 
 class _MealCardState extends State<MealCard> {
-  var list = [1, 2, 3, 4, 5];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -88,7 +85,15 @@ class _MealCardState extends State<MealCard> {
                                   Padding(
                                     padding: EdgeInsets.only(top: 4.sp),
                                     child: DefaultText.SemiBold(
-                                        text: widget.TotalCalories.toString() +
+                                        text: [
+                                              ...widget.MealItems.map(
+                                                  (element) {
+                                                return element["Calories"];
+                                              })
+                                            ].fold(0, (previousValue, element) {
+                                              num x = element;
+                                              return previousValue + x.round();
+                                            }).toString() +
                                             ' Kcal',
                                         textcolor: colors.SecondaryTextColor,
                                         size: 12.sp),
@@ -113,9 +118,11 @@ class _MealCardState extends State<MealCard> {
                 ),
               ),
               Divider(color: Colors.grey),
-              ...widget.FoodItems.map((e) => FoodEntryItem(
-                    MealName: e,
-                  )),
+              ...widget.MealItems.map((element) {
+                return FoodEntryItem(
+                    MealName: element["Item_Name"],
+                    calories: element["Calories"]);
+              }),
               Padding(
                 padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
                 child: Align(
@@ -127,7 +134,21 @@ class _MealCardState extends State<MealCard> {
                               side: BorderSide(color: colors.PrimaryTextColor),
                               borderRadius: BorderRadius.circular(22)),
                           backgroundColor: Colors.white),
-                      onPressed: () {},
+                      onPressed: () {
+                        switch (widget.MealTitle) {
+                          case "Breakfast":
+                            widget.OnAddFood(1);
+                            break;
+                          case "Lunch":
+                            widget.OnAddFood(2);
+                            break;
+                          case "Dinner":
+                            widget.OnAddFood(3);
+                            break;
+                          default:
+                            break;
+                        }
+                      },
                       child: DefaultText.Bold(
                           text: 'Add Food',
                           // textcolor: Colors.white,

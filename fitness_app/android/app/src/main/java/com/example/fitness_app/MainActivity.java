@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.plugin.common.MethodCall;
@@ -30,6 +31,8 @@ public class MainActivity extends FlutterActivity {
     private static boolean done = false;
     private static MethodChannel.Result ChannelResult;
     private static String Test = " ";
+    private static List<Integer> lens = new ArrayList<>();
+    private static List<Integer> wids = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,12 @@ public class MainActivity extends FlutterActivity {
                     startActivityForResult(new Intent(getApplicationContext(), DetectorActivity.class),1);
                     ChannelResult = result;
                 }
+//                if(call.method.equals("len")){
+//                    ChannelResult.success(lens);
+//                }
+//                if(call.method.equals("wid")){
+//                    ChannelResult.success(wids);
+//                }
             }
         });
     }
@@ -57,8 +66,38 @@ public class MainActivity extends FlutterActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try{
+            List<String> food_classes = new ArrayList<>();
+            food_classes.add("Bread");
+            food_classes.add("Pancake");
+            food_classes.add("Waffle");
+            food_classes.add("Bagel");
+            food_classes.add("Muffin");
+            food_classes.add("Doughnut");
+            food_classes.add("Hamburger");
+            food_classes.add("Pizza");
+            food_classes.add("Sandwich");
+            food_classes.add("Hot dog");
+            food_classes.add("French fries");
+            food_classes.add("Apple");
+            food_classes.add("Orange");
+            food_classes.add("Banana");
+            food_classes.add("Grape");
+
             List<String> results = data.getStringArrayListExtra("res");
-            ChannelResult.success(results);
+            List<Integer> class_index = new ArrayList<>();
+            for(int i = 0; i<results.size(); i++){
+                class_index.add(food_classes.indexOf(results.get(i)));
+            }
+            List<Integer> lengths = data.getIntegerArrayListExtra("len");
+            List<Integer> widths = data.getIntegerArrayListExtra("wid");
+
+            List<Integer> combined_list = new ArrayList<>();
+            combined_list.add(results.size());
+            combined_list.addAll(class_index);
+            combined_list.addAll(lengths);
+            combined_list.addAll(widths);
+
+            ChannelResult.success(combined_list);
         }catch (Exception e){
             List<String> empty_list = new ArrayList<>();
             ChannelResult.success(empty_list);
@@ -125,4 +164,9 @@ public class MainActivity extends FlutterActivity {
 //        }
 //        return calCounts;
 //    }
+}
+class DetectionResult {
+    List<String> food_names;
+    List<Integer> box_len;
+    List<Integer> box_wid;
 }

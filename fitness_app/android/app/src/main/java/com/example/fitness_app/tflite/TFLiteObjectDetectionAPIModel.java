@@ -36,6 +36,8 @@ import java.util.Map;
 import java.util.Vector;
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.gpu.GpuDelegate;
+import org.tensorflow.lite.nnapi.NnApiDelegate;
+
 import com.example.fitness_app.env.Logger;
 /**
  * Wrapper for frozen detection models trained using the Tensorflow Object Detection API:
@@ -115,7 +117,7 @@ public class TFLiteObjectDetectionAPIModel implements Classifier {
     BufferedReader br = new BufferedReader(new InputStreamReader(labelsInput));
     String line;
     while ((line = br.readLine()) != null) {
-      LOGGER.w(line);
+//      LOGGER.w(line);
       d.labels.add(line);
     }
     br.close();
@@ -127,6 +129,8 @@ public class TFLiteObjectDetectionAPIModel implements Classifier {
       Interpreter.Options options = (new Interpreter.Options()).addDelegate(delegate);
       d.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename), options);
     } catch (Exception e) {
+//      Interpreter.Options options = (new Interpreter.Options().addDelegate(new NnApiDelegate()));
+//      d.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename), options);
       throw new RuntimeException(e);
     }
 

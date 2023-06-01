@@ -44,8 +44,8 @@ public class MultiBoxTracker {
     private static final float TEXT_SIZE_DIP = 18;
     private static final float MIN_SIZE = 16.0f;
     private static final int[] COLORS = {
-            Color.parseColor("#ff8b1a"),
             Color.parseColor("#77037B"),
+            Color.parseColor("#ff8b1a"),
             Color.parseColor("#FFD93D"),
             Color.parseColor("#19A7CE"),
             Color.parseColor("#03C988"),
@@ -76,7 +76,7 @@ public class MultiBoxTracker {
         boxPaint.setColor(Color.RED);
         boxPaint.setStyle(Style.STROKE);
         boxPaint.setStrokeWidth(10.0f);
-        boxPaint.setStrokeCap(Cap.BUTT);
+        boxPaint.setStrokeCap(Cap.SQUARE);
         boxPaint.setStrokeJoin(Join.ROUND);
         boxPaint.setStrokeMiter(100);
 
@@ -95,7 +95,7 @@ public class MultiBoxTracker {
 
 
     public synchronized void trackResults(final List<Recognition> results, final long timestamp) {
-        logger.i("Processing %d results from %d", results.size(), timestamp);
+//        logger.i("Processing %d results from %d", results.size(), timestamp);
         processResults(results);
     }
 
@@ -147,7 +147,8 @@ public class MultiBoxTracker {
 
     private void processResults(final List<Recognition> results) {
         final List<Pair<Float, Recognition>> rectsToTrack = new LinkedList<Pair<Float, Recognition>>();
-
+        float width = 0;
+        float height= 0;
         screenRects.clear();
         final Matrix rgbFrameToScreen = new Matrix(getFrameToCanvasMatrix());
 
@@ -159,14 +160,15 @@ public class MultiBoxTracker {
 
             final RectF detectionScreenRect = new RectF();
             rgbFrameToScreen.mapRect(detectionScreenRect, detectionFrameRect);
-
-            logger.v(
-                    "Result! Frame: " + result.getLocation() + " mapped to screen:" + detectionScreenRect);
+            width = detectionFrameRect.width();
+            height = detectionFrameRect.height();
+//            logger.v(
+//                    "Result! Frame: " + result.getLocation() + " mapped to screen:" + detectionScreenRect);
 
             screenRects.add(new Pair<Float, RectF>(result.getConfidence(), detectionScreenRect));
 
             if (detectionFrameRect.width() < MIN_SIZE || detectionFrameRect.height() < MIN_SIZE) {
-                logger.w("Degenerate rectangle! " + detectionFrameRect);
+//                logger.w("Degenerate rectangle! " + detectionFrameRect);
                 continue;
             }
 
