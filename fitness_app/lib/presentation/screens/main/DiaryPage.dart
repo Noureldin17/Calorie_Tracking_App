@@ -1,15 +1,11 @@
 import 'dart:math';
-
 import 'package:fitness_app/data/models/detection_results_model.dart';
 import 'package:fitness_app/presentation/widgets/DefaultText.dart';
 import 'package:fitness_app/presentation/widgets/DiaryPageWidgets/DetectionInfoView.dart';
 import 'package:fitness_app/presentation/widgets/PrimaryButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../../../constants/detection_constants.dart' as constants;
-import 'package:camera/camera.dart';
-import 'package:fitness_app/presentation/screens/CameraPage.dart';
 import 'package:fitness_app/presentation/widgets/DiaryPageWidgets/CalorieMetricsCard.dart';
 import 'package:fitness_app/presentation/widgets/DiaryPageWidgets/MealCard.dart';
 import 'package:fitness_app/presentation/widgets/DiaryPageWidgets/SaveFoodModalSheet.dart';
@@ -115,8 +111,6 @@ class _DiaryPageState extends State<DiaryPage> {
               ),
               backgroundColor: colors.PrimaryColor,
               onPressed: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => HomeView()));
                 StartDetection(0);
               },
             ),
@@ -346,7 +340,6 @@ class _DiaryPageState extends State<DiaryPage> {
 
   Future<DetectionResult> runJava() async {
     setState(() {
-      // JavaResults = [];
       New_Detections = [];
     });
     List<String> food = [];
@@ -423,9 +416,7 @@ class _DiaryPageState extends State<DiaryPage> {
           break;
       }
     }
-    print(Length_CM);
-    print(Width_CM);
-    print(Volumes);
+
     return Volumes;
   }
 }

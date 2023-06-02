@@ -165,8 +165,3 @@ public class MainActivity extends FlutterActivity {
 //        return calCounts;
 //    }
 }
-class DetectionResult {
-    List<String> food_names;
-    List<Integer> box_len;
-    List<Integer> box_wid;
-}

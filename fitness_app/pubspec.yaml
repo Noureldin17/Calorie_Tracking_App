@@ -76,11 +76,7 @@ flutter:
   assets:
     - assets/
     - assets/foodicons/
-    - assets/tensorflow/detect.tflite
-    - assets/tensorflow/mobile.tflite
     - assets/tensorflow/food_detect.tflite
-    - assets/tensorflow/labelmap.txt
-    - assets/tensorflow/mobile.txt
     - assets/tensorflow/food_labelmap.txt
     - assets/icons/
     - assets/icons/arrows/
