@@ -391,10 +391,10 @@ class _DiaryPageState extends State<DiaryPage> {
       switch (FoodInfo[FoodClasses.indexOf(Food_Names[i])]["Class"]) {
         case "Cylinder":
           if ((Width_CM[i] / Length_CM[i]) <= 0.7) {
-            double vol = Length_CM[i] * pi * 3.5;
+            double vol = Length_CM[i] * pi * 3.8;
             Volumes.add(vol);
           } else {
-            double vol = Width_CM[i] * pi * 3.5;
+            double vol = Width_CM[i] * pi * 3.8;
             Volumes.add(vol);
           }
           break;
